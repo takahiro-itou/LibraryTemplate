@@ -1,0 +1,41 @@
+//  -*-  coding: utf-8; mode: c++  -*-  //
+/*************************************************************************
+**                                                                      **
+**                      ---  Library Project.  ---                      **
+**                                                                      **
+**          Copyright (C), 2016, Takahiro Itou                          **
+**          All Rights Reserved.                                        **
+**                                                                      **
+*************************************************************************/
+
+/**
+**      スクリプトによる設定値が書き込まれるヘッダファイル。
+**
+**      @file       .Config/ConfiguredLibraryProject.h.in
+**/
+
+#if !defined( LIBPROJ_CONFIG_INCLUDED_CONFIGURED_LIBRARY_PROJECT_H )
+#    define   LIBPROJ_CONFIG_INCLUDED_CONFIGURED_LIBRARY_PROJECT_H
+
+//========================================================================
+//
+//    Name Space.
+//
+
+/**
+**    スクリプトによって設定された名前空間。
+**/
+
+#define     LIBPROJ_CNF_NS                  @LIBPROJ_CNF_NAMESPACE@
+
+/**
+**    名前空間。
+**/
+
+#define     LIBPROJ_NAMESPACE               LIBPROJ_CNF_NS
+
+#define     LIBPROJ_NAMESPACE_BEGIN         namespace  LIBPROJ_CNF_NS  {
+
+#define     LIBPROJ_NAMESPACE_END           }
+
+#endif
