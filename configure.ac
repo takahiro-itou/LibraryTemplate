@@ -117,6 +117,7 @@ dnl   Basic Features.
 dnl
 
 AC_CONFIG_FILES([
+    .CMake/Makefile
     .M4/Makefile
     Makefile
     Bin/Makefile
