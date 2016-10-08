@@ -35,3 +35,10 @@ Set (MODULE_NEEDS_LIBRARIES
 
 Include (${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
 
+##----------------------------------------------------------------
+##
+##    テストの設定。
+##
+
+Add_SubDirectory (Tests)
+
