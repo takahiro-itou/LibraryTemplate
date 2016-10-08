@@ -70,6 +70,14 @@ Include_Directories ("${PROJECT_BINARY_DIR}/Include")
 
 ##----------------------------------------------------------------
 ##
+##    Additional Packages.
+##    外部ライブラリ。
+##
+
+Include (${COMMON_CMAKE_DIR}/FindCppUnit.cmake)
+
+##----------------------------------------------------------------
+##
 ##    パッケージコンフィグレーション。
 ##
 
