@@ -22,6 +22,12 @@
 
 LIBPROJ_NAMESPACE_BEGIN
 
+/**
+**    ダミーの型宣言。
+**/
+
+typedef     int     CommonType;
+
 LIBPROJ_NAMESPACE_END
 
 #endif
