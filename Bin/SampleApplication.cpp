@@ -14,7 +14,7 @@
 **      @file       Bin/SampleApplication.cpp
 **/
 
-#include    "LibraryProject/Common/LibraryProjectSettings.h"
+#include    "LibraryProject/Foo/Foo.h"
 
 #include    <iostream>
 
@@ -22,5 +22,7 @@ using   namespace   LIBPROJ_NAMESPACE;
 
 int  main(int argc, char * argv[])
 {
+    std::cout   <<  Foo::Foo::functionFoo(2, 3)
+                <<  std::endl;
     return ( 0 );
 }
