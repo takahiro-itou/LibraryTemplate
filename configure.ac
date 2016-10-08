@@ -151,7 +151,9 @@ dnl   Test Festures.
 dnl
 
 AC_CONFIG_FILES([
+    Lib/Bar/Tests/Makefile
     Lib/Common/Tests/Makefile
+    Lib/Foo/Tests/Makefile
     Lib/Tests/Makefile
 ])
 
