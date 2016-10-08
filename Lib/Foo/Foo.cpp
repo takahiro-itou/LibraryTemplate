@@ -61,7 +61,7 @@ Foo::functionFoo(
         CommonType  x,
         CommonType  y)
 {
-    return ( 0 );
+    return ( Bar::Bar::functionBar(x) + Bar::Bar::functionBar(y) );
 }
 
 //========================================================================

@@ -11,7 +11,7 @@ TESTS                   =  \
 ##    Test Configurations.
 ##
 
-TARGET_TESTEE_LIBRARY       +=  ../libsampleFoo.a
+TARGET_TESTEE_LIBRARY       +=  -lsampleFoo
 
 DIST_NOINST_DATA_FILES      +=
 DIST_NOINST_HEADER_FILES    +=

@@ -58,7 +58,7 @@ CommonType
 Bar::functionBar(
         CommonType  x)
 {
-    return ( 0 );
+    return ( x * x );
 }
 
 //========================================================================
