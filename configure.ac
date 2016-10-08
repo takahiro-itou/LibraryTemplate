@@ -129,7 +129,9 @@ AC_CONFIG_FILES([
     Bin/Makefile
     Lib/Makefile
     Lib/.Config/Makefile
+    Lib/Bar/Makefile
     Lib/Common/Makefile
+    Lib/Foo/Makefile
 ])
 
 AC_CONFIG_FILES([

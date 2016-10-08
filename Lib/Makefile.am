@@ -3,7 +3,7 @@
 ##    List of Directories.
 ##
 
-SUBLIBS                 =  Common
+SUBLIBS                 =  Common  Bar  Foo
 
 SUBDIRS                 =  Tests  .Config  $(SUBLIBS)  .
 

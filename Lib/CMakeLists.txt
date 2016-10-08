@@ -14,4 +14,6 @@ Set (LIBRARIES_TARGET_PREFIX)
 Add_SubDirectory (.Config)
 
 Add_SubDirectory (Common)
+Add_SubDirectory (Bar)
+Add_SubDirectory (Foo)
 
