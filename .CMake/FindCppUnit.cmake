@@ -7,7 +7,7 @@ If ( CPPUNIT_DIR )
     Set (CPPUNIT_INCLUDE_SEARCH_DIRS  ${CPPUNIT_DIR}/include)
 Else  ()
     Set (CPPUNIT_INCLUDE_SEARCH_DIRS
-        /usr/local/include  /usr/local/include
+        /usr/local/include  /usr/include
     )
 Endif ()
 
@@ -30,7 +30,7 @@ If ( CPPUNIT_DIR )
 Else  ()
     Set (CPPUNIT_LIBRARY_SEARCH_DIRS
         ${CPPUNIT_INCLUDE_DIR}/../lib
-        /usr/local/lib  /usr/local/lib
+        /usr/local/lib  /usr/lib
     )
 Endif ()
 
