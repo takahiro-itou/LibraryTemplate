@@ -41,26 +41,20 @@ Set (LIBTOP_BINARY_DIR     "${PROJECT_BINARY_DIR}/${LIBTOP_DIR_NAME}")
 Set (INCLUDE_SOURCE_DIR    "${INCTOP_SOURCE_DIR}/${INCPKG_DIR_NAME}")
 Set (INCLUDE_BINARY_DIR    "${INCTOP_BINARY_DIR}/${INCPKG_DIR_NAME}")
 
+##----------------------------------------------------------------
+##
+##    ビルと環境の検査。
+##
+
+Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
+
 ##
 ##    Project Name Space.
 ##
 
 Set (LIBPROJ_CNF_NAMESPACE  LibraryProject)
 
-##
-##    設定を書き込んだファイルを生成。
-##
-
-Configure_File (
-    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredLibraryProject.h.in"
-    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredLibraryProject.h"
-)
-
-Configure_File (
-    "${INCLUDE_SOURCE_DIR}/.Config/Config.h.cmake.in"
-    "${INCLUDE_BINARY_DIR}/.Config/.${PROJECT_NAME}.Config.h"
-)
-
+##----------------------------------------------------------------
 ##
 ##    インクルードパスの設定。
 ##
@@ -75,6 +69,21 @@ Include_Directories ("${PROJECT_BINARY_DIR}/Include")
 ##
 
 Include (${COMMON_CMAKE_DIR}/FindCppUnit.cmake)
+
+##----------------------------------------------------------------
+##
+##    設定を書き込んだファイルを生成。
+##
+
+Configure_File (
+    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredLibraryProject.h.in"
+    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredLibraryProject.h"
+)
+
+Configure_File (
+    "${INCLUDE_SOURCE_DIR}/.Config/Config.h.cmake.in"
+    "${INCLUDE_BINARY_DIR}/.Config/.${PROJECT_NAME}.Config.h"
+)
 
 ##----------------------------------------------------------------
 ##
