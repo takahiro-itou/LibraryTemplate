@@ -51,6 +51,7 @@ Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckConstExpr.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckNullPtr.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
+Include (${COMMON_CMAKE_DIR}/CheckStaticAssert.cmake)
 
 ##
 ##    Project Name Space.
