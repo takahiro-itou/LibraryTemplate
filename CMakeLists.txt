@@ -16,9 +16,9 @@ CMake_Minimum_Required (VERSION  3.0.2)
 ##
 
 Set     (PROJECT_NAME      LibraryProject)
-Set     (serial            "0.0.0")
+Set     (serial            "1.0.0")
 
-Project (${PROJECT_NAME}   VERSION  1.0.0)
+Project (${PROJECT_NAME}   VERSION  1.0.68)
 
 ##----------------------------------------------------------------
 ##
