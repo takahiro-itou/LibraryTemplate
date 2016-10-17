@@ -53,6 +53,8 @@ Include (${COMMON_CMAKE_DIR}/CheckNullPtr.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckStaticAssert.cmake)
 
+Include (${COMMON_CMAKE_DIR}/CheckDefaultDeclarations.cmake)
+
 ##
 ##    Project Name Space.
 ##
