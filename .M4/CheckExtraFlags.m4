@@ -14,7 +14,7 @@ dnl             オプションが受け付けられる場合は、
 dnl             そのオプションが末尾に追加される。
 dnl     -   myac_cf_$2_enabled
 dnl             検査結果が TRUE/FALSE で記録される。
-dnl     
+dnl
 AC_DEFUN([MYAC_CHECK_EXTRA_COMPILER_OPTION],
 [AC_MSG_CHECKING([for Compiler Option ]$3)
 saved_CFLAGS=${CFLAGS}
@@ -52,9 +52,6 @@ dnl             オプションが受け付けられる場合は、
 dnl             そのオプションが末尾に追加される。
 dnl     -   myac_lf_$2_enabled
 dnl             検査結果が TRUE/FALSE で記録される。
-dnl     
-dnl
-dnl   Check Extra Link Options.
 dnl
 AC_DEFUN([MYAC_CHECK_EXTRA_LINKER_OPTION],
 [AC_MSG_CHECKING([for Linker Option ]$3)
