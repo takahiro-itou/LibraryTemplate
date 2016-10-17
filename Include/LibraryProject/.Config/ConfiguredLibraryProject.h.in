@@ -43,6 +43,7 @@
 //    Compile Features.
 //
 
+//----------------------------------------------------------------
 //
 //    キーワード constexpr  の検査。
 //
@@ -61,6 +62,7 @@
 #    define     CONSTEXPR_FUNC
 #endif
 
+//----------------------------------------------------------------
 //
 //    キーワード nullptr  の検査。
 //
@@ -74,6 +76,7 @@
 #    undef      LIBPROJ_ENABLE_NULLPTR
 #endif
 
+//----------------------------------------------------------------
 //
 //    キーワード override の検査。
 //
@@ -87,6 +90,7 @@
 #    undef      LIBPROJ_ENABLE_OVERRIDE
 #endif
 
+//----------------------------------------------------------------
 //
 //    キーワード static_assert  の検査。
 //
@@ -95,6 +99,116 @@
 #    define     LIBPROJ_ENABLE_STATIC_ASSERT    1
 #else
 #    undef      LIBPROJ_ENABLE_STATIC_ASSERT
+#endif
+
+//----------------------------------------------------------------
+//
+//    コピーコンストラクタのデフォルト宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_COPYCTOR_DEFAULT_ENABLED@ )
+#    define     LIBPROJ_ENABLE_COPYCTOR_DEFAULT     1
+#else
+#    undef      LIBPROJ_ENABLE_COPYCTOR_DEFAULT
+#endif
+
+//----------------------------------------------------------------
+//
+//    コピーコンストラクタのデリート宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_COPYCTOR_DELETE_ENABLED@ )
+#    define     LIBPROJ_ENABLE_COPYCTOR_DELETE      1
+#else
+#    undef      LIBPROJ_ENABLE_COPYCTOR_DELETE
+#endif
+
+//----------------------------------------------------------------
+//
+//    コピー代入演算子のデフォルト宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_COPYOPEQ_DEFAULT_ENABLED@ )
+#    define     LIBPROJ_ENABLE_COPYOPEQ_DEFAULT     1
+#else
+#    undef      LIBPROJ_ENABLE_COPYOPEQ_DEFAULT
+#endif
+
+//----------------------------------------------------------------
+//
+//    コピー代入演算子のデリート宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_COPYOPEQ_DELETE_ENABLED@ )
+#    define     LIBPROJ_ENABLE_COPYOPEQ_DELETE      1
+#else
+#    undef      LIBPROJ_ENABLE_COPYOPEQ_DELETE
+#endif
+
+//----------------------------------------------------------------
+//
+//    ムーブコンストラクタの宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_MOVECTOR_DECLARE_ENABLED@ )
+#    define     LIBPROJ_ENABLE_MOVECTOR_DECLARE     1
+#else
+#    undef      LIBPROJ_ENABLE_MOVECTOR_DECLARE
+#endif
+
+//----------------------------------------------------------------
+//
+//    ムーブコンストラクタのデフォルト宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_MOVECTOR_DEFAULT_ENABLED@ )
+#    define     LIBPROJ_ENABLE_MOVECTOR_DEFAULT     1
+#else
+#    undef      LIBPROJ_ENABLE_MOVECTOR_DEFAULT
+#endif
+
+//----------------------------------------------------------------
+//
+//    ムーブコンストラクタのデリート宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_MOVECTOR_DELETE_ENABLED@ )
+#    define     LIBPROJ_ENABLE_MOVECTOR_DELETE      1
+#else
+#    undef      LIBPROJ_ENABLE_MOVECTOR_DELETE
+#endif
+
+//----------------------------------------------------------------
+//
+//    ムーブ代入演算子の宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_MOVEOPEQ_DECLARE_ENABLED@ )
+#    define     LIBPROJ_ENABLE_MOVEOPEQ_DECLARE     1
+#else
+#    undef      LIBPROJ_ENABLE_MOVEOPEQ_DECLARE
+#endif
+
+//----------------------------------------------------------------
+//
+//    ムーブ代入演算子のデフォルト宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_MOVEOPEQ_DEFAULT_ENABLED@ )
+#    define     LIBPROJ_ENABLE_MOVEOPEQ_DEFAULT     1
+#else
+#    undef      LIBPROJ_ENABLE_MOVEOPEQ_DEFAULT
+#endif
+
+//----------------------------------------------------------------
+//
+//    ムーブ代入演算子のデリート宣言の検査。
+//
+
+#if ( @CONFIG_CHECK_CXX_MOVEOPEQ_DELETE_ENABLED@ )
+#    define     LIBPROJ_ENABLE_MOVEOPEQ_DELETE      1
+#else
+#    undef      LIBPROJ_ENABLE_MOVEOPEQ_DELETE
 #endif
 
 #endif
