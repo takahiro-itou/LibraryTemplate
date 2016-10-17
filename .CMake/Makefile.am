@@ -8,11 +8,12 @@
 ##
 
 dist_noinst_DATA    =  \
-    BuildLibraryCommon.cmake  \
-    CheckConstExpr.cmake      \
-    CheckNullPtr.cmake        \
-    CheckOverride.cmake       \
-    CheckStaticAssert.cmake   \
-    EnableCxx11.cmake         \
+    BuildLibraryCommon.cmake        \
+    CheckConstExpr.cmake            \
+    CheckDefaultDeclarations.cmake  \
+    CheckNullPtr.cmake              \
+    CheckOverride.cmake             \
+    CheckStaticAssert.cmake         \
+    EnableCxx11.cmake               \
     FindCppUnit.cmake
 
