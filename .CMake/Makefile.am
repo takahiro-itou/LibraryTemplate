@@ -13,6 +13,7 @@ dist_noinst_DATA    =  \
     CheckDefaultDeclarations.cmake  \
     CheckNullPtr.cmake              \
     CheckOverride.cmake             \
+    CheckRightValueReference.cmake  \
     CheckStaticAssert.cmake         \
     EnableCxx11.cmake               \
     FindCppUnit.cmake
