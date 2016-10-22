@@ -110,6 +110,7 @@ m4_include([.M4/CheckNullPtr.m4])
 m4_include([.M4/CheckOverride.m4])
 m4_include([.M4/CheckStaticAssert.m4])
 
+m4_include([.M4/CheckRightValueReference.m4])
 m4_include([.M4/CheckDefaultDeclarations.m4])
 
 dnl----------------------------------------------------------------
