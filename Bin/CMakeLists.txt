@@ -1,4 +1,7 @@
 
-Add_Executable        (SampleApplication  SampleApplication.cpp)
-Target_Link_Libraries (SampleApplication  ${PROJECT_NAME}-Foo)
+add_executable       (SampleApplication     SampleApplication.cpp)
+target_link_libraries(SampleApplication     ${PROJECT_NAME}-Foo)
 
+install(TARGETS         SampleApplication
+        DESTINATION     ${BINTOP_DIR_NAME}/
+)
