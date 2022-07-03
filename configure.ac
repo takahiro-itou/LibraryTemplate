@@ -110,6 +110,9 @@ m4_include([.M4/CheckNullPtr.m4])
 m4_include([.M4/CheckOverride.m4])
 m4_include([.M4/CheckStaticAssert.m4])
 
+m4_include([.M4/CheckRightValueReference.m4])
+m4_include([.M4/CheckDefaultDeclarations.m4])
+
 dnl----------------------------------------------------------------
 dnl
 dnl   Additional Packages.
@@ -142,6 +145,7 @@ dnl
 
 AC_CONFIG_FILES([
     .CMake/Makefile
+    .CMake/Modules/Makefile
     .M4/Makefile
     Makefile
     Bin/Makefile

@@ -11,6 +11,7 @@ DIST_SUBDIRS    =  .M4  .CMake  $(SUBDIRS)
 ##
 
 dist_noinst_DATA        =  \
-        LibraryProjectConfig.cmake.in  \
-        CMakeLists.txt
+        CMakeLists.txt                 \
+        Doxyfile                       \
+        LibraryProjectConfig.cmake.in
 
