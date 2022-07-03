@@ -16,9 +16,9 @@ cmake_minimum_required(VERSION  3.0.2)
 ##
 
 set(PROJECT_NAME        LibraryProject)
-set(serial              "0.0.0")
+set(serial              "1.1.91")
 
-project(${PROJECT_NAME}     VERSION  1.0.68)
+project(${PROJECT_NAME}     VERSION  1.1.91)
 
 ##----------------------------------------------------------------
 ##

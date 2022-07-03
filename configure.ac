@@ -17,7 +17,7 @@ dnl
 
 AC_INIT(
     [LibraryProject],
-    [1.0.68],
+    [1.1.91],
     [BUG-REPORT-ADDRESS],
     [LibraryProject])
 
