@@ -8,6 +8,17 @@
 ##
 
 dist_noinst_DATA    =  \
-    Makefile.DirList.inc  \
-    Makefile.Install.inc
+    CheckConstExpr.m4              \
+    CheckDefaultDeclarations.m4    \
+    CheckExtraFlags.m4             \
+    CheckNullPtr.m4                \
+    CheckOverride.m4               \
+    CheckRightValueReference.m4    \
+    CheckStaticAssert.m4           \
+    ConfigDirectory.m4             \
+    EnableCxx11.m4                 \
+    LinkerScripts.m4               \
+    Makefile.DirList.inc           \
+    Makefile.Install.inc           \
+    WithExtLibs.m4
 
