@@ -28,6 +28,12 @@ dnl
 AC_CONFIG_AUX_DIR([.Config])
 
 dnl
+dnl   ターゲットシステムを判定
+dnl
+
+m4_include([.M4/TargetSystem.m4])
+
+dnl
 dnl   適当なバージョンの automake を設定
 dnl
 
@@ -39,20 +45,13 @@ dnl   プロジェクトの基本設定。
 dnl
 
 AC_CONFIG_SRCDIR([Makefile.am])
-AC_LANG_CPLUSPLUS
+AC_LANG([C++])
 
 dnl
 dnl   デフォルトのコンパイルオプション
 dnl
 
-: ${CFLAGS:='-O0  -g  -D_DEBUG'}
-: ${CXXFLAGS:='-O0  -g  -D_DEBUG'}
-
-m4_include([.M4/CheckExtraFlags.m4])
-
-EXTRA_COMPILER_OPTIONS="-Wall"
-CFLAGS="${CFLAGS}  ${EXTRA_COMPILER_OPTIONS}"
-CXXFLAGS="${CXXFLAGS}  ${EXTRA_COMPILER_OPTIONS}"
+m4_include([.M4/DefaultCompileOptions.m4])
 
 dnl
 dnl   Project Name Space.
@@ -103,6 +102,8 @@ dnl
 dnl   Check Extra Compiler/Linker Options.
 dnl
 
+m4_include([.M4/CheckExtraFlags.m4])
+
 m4_include([.M4/EnableCxx11.m4])
 
 m4_include([.M4/CheckConstExpr.m4])
@@ -119,11 +120,9 @@ dnl   Additional Packages.
 dnl   外部パッケージの追加
 dnl
 
-m4_include([.M4/WithExtLibs.m4])
+m4_include([.M4/WithExtPkgs.m4])
 
-MYAC_WITH_EXT_LIB(
-    [CPPUNIT],  [cppunit],  [Path to cppunit],  [yes],
-    [AMCNF_CPPUNIT_ENABLED])
+m4_include([.M4/Packages/CppUnit.m4])
 
 dnl----------------------------------------------------------------
 dnl
@@ -131,7 +130,7 @@ dnl   Linker Scripts.
 dnl   リンカスクリプトを生成する。
 dnl
 
-m4_include([.M4/LinkerScripts.m4])
+m4_include([Lib/.LinkerScript/LinkerScripts.m4])
 
 dnl----------------------------------------------------------------
 dnl

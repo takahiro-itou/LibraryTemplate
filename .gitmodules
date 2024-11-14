@@ -1,0 +1,3 @@
+[submodule ".M4"]
+	path = .M4
+	url = ../InitM4.git
