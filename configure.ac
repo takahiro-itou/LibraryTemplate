@@ -51,14 +51,7 @@ dnl
 dnl   デフォルトのコンパイルオプション
 dnl
 
-: ${CFLAGS:='-O0  -g  -D_DEBUG'}
-: ${CXXFLAGS:='-O0  -g  -D_DEBUG'}
-
-m4_include([.M4/CheckExtraFlags.m4])
-
-EXTRA_COMPILER_OPTIONS="-Wall"
-CFLAGS="${CFLAGS}  ${EXTRA_COMPILER_OPTIONS}"
-CXXFLAGS="${CXXFLAGS}  ${EXTRA_COMPILER_OPTIONS}"
+m4_include([.M4/DefaultCompileOptions.m4])
 
 dnl
 dnl   Project Name Space.
@@ -108,6 +101,8 @@ dnl
 dnl
 dnl   Check Extra Compiler/Linker Options.
 dnl
+
+m4_include([.M4/CheckExtraFlags.m4])
 
 m4_include([.M4/EnableCxx11.m4])
 
