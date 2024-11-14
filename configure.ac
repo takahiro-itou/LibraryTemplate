@@ -121,9 +121,7 @@ dnl
 
 m4_include([.M4/WithExtPkgs.m4])
 
-MYAC_WITH_EXT_LIB(
-    [CPPUNIT],  [cppunit],  [Path to cppunit],  [yes],
-    [AMCNF_CPPUNIT_ENABLED])
+m4_include([.M4/Packages/CppUnit.m4])
 
 dnl----------------------------------------------------------------
 dnl
