@@ -32,7 +32,6 @@ jobs:
       - name: Run bootstrap
         run : |
           pwd
-          cd Core
           autoconf --version
           ./bootstrap.sh
           ls -aR
@@ -42,7 +41,7 @@ jobs:
         run : |
           mkdir -p build
           cd build
-          ../Core/run-autoconf-${{ matrix.build-type }}  \
+          ../run-autoconf-${{ matrix.build-type }}  \
             --with-cppunit=${cppunit_dir}
         env :
           cppunit_dir : ${{ steps.install-cppunit.outputs.real-install-dir }}
