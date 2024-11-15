@@ -66,14 +66,16 @@ TEST_LINK_LDADD_XUNIT       =
 endif
 
 AM_CPPFLAGS         =  \
-        -I${TESTEE_SOURCE_DIR}  \
-        -I${INCTOP_SOURCE_DIR}  \
-        -I${LIBTOP_SOURCE_DIR}  \
-        -I${DRIVER_SOURCE_DIR}  \
-        ${TEST_CPPFLAGS}
+        -I${TESTEE_SOURCE_DIR}      \
+        -I${INCTOP_SOURCE_DIR}      \
+        -I${LIBTOP_SOURCE_DIR}      \
+        -I${DRIVER_SOURCE_DIR}      \
+        -I${DRIVER_BINARY_DIR}      \
+        ${TEST_CPPFLAGS_COMMON}     \
+        ${TEST_CPPFLAGS_XUNIT}
 
-AM_CFLAGS           =  ${TEST_CPPFLAGS_XUNIT}
-AM_CXXFLAGS         =  ${TEST_CPPFLAGS_XUNIT}
+AM_CFLAGS           =  ${TEST_CFLAGS_XUNIT}
+AM_CXXFLAGS         =  ${TEST_CXXFLAGS_XUNIT}
 AM_LDFLAGS          =  \
         -L${LIBTOP_BINARY_DIR}  \
         ${TEST_LDFLAGS_COMMON}  \
