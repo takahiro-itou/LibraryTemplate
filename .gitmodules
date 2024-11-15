@@ -3,4 +3,4 @@
 	url = ../InitM4.git
 [submodule ".CMake"]
 	path = .CMake
-	url = git@gitlab.com:takahiro-itou/InitCMake.git
+	url = ../InitCMake.git
