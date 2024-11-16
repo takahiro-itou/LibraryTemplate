@@ -41,6 +41,12 @@ Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
 
 enable_testing ()
 
+##
+##    Project Name Space.
+##
+
+set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
+
 
 ##----------------------------------------------------------------
 ##
@@ -97,12 +103,6 @@ Include (${COMMON_CMAKE_DIR}/CheckStaticAssert.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckRightValueReference.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckDefaultDeclarations.cmake)
 
-##
-##    Project Name Space.
-##
-
-set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
-
 ##----------------------------------------------------------------
 ##
 ##    インクルードパスの設定。
@@ -158,5 +158,5 @@ install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
 ##    サブディレクトリの追加。
 ##
 
-add_subdirectory(Lib)
-add_subdirectory(Bin)
+Add_SubDirectory (Lib)
+Add_SubDirectory (Bin)
