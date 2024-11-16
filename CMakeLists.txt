@@ -43,7 +43,7 @@ Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
 ##    デフォルトのコンパイルオプション。
 ##
 
-enable_testing ()
+Include (${COMMON_CMAKE_DIR}/DefaultCompileOptions.cmake)
 
 ##
 ##    Project Name Space.
