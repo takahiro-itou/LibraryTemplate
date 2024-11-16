@@ -27,6 +27,12 @@ project(${PROJECT_NAME}     VERSION  1.0.0)
 
 set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
 
+##
+##    ターゲットシステムを判定
+##
+
+Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
+
 
 ##----------------------------------------------------------------
 ##
@@ -35,9 +41,16 @@ set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
 
 enable_testing ()
 
+
+##----------------------------------------------------------------
+##
+##    ディレクトリ名。
+##
+
 set(INCTOP_DIR_NAME         "Include")
 set(BINTOP_DIR_NAME         "Bin")
 set(LIBTOP_DIR_NAME         "Lib")
+
 set(INCPKG_DIR_NAME         "${PROJECT_NAME}")
 set(PACKAGE_INCLUDE_DIR     "${INCTOP_DIR_NAME}/${INCPKG_DIR_NAME}")
 
@@ -52,6 +65,26 @@ set(INCLUDE_BINARY_DIR      "${INCTOP_BINARY_DIR}/${INCPKG_DIR_NAME}")
 ##----------------------------------------------------------------
 ##
 ##    ビルド環境の検査。
+##
+
+##
+##    Check Programs.
+##
+
+##
+##    Check Header Files.
+##
+
+##
+##    Check Libraries.
+##
+
+##
+##    Check Types.
+##
+
+##
+##    Check Extra Compiler/Linker Options.
 ##
 
 Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
