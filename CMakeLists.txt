@@ -20,31 +20,73 @@ set(serial              "1.1.91")
 
 project(${PROJECT_NAME}     VERSION  1.1.91)
 
+
+##
+##    共通の .cmake ファイルの置いてある場所。
+##
+
+set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
+
+##
+##    ターゲットシステムを判定
+##
+
+Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
+
+
 ##----------------------------------------------------------------
 ##
 ##    プロジェクトの基本設定。
 ##
 
-enable_testing ()
+##
+##    デフォルトのコンパイルオプション。
+##
 
-set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
+Include (${COMMON_CMAKE_DIR}/DefaultCompileOptions.cmake)
+
+##
+##    Project Name Space.
+##
+
+set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
+
+
+##----------------------------------------------------------------
+##
+##    ディレクトリ名。
+##
+
 set(INCTOP_DIR_NAME         "Include")
 set(BINTOP_DIR_NAME         "Bin")
 set(LIBTOP_DIR_NAME         "Lib")
-set(INCPKG_DIR_NAME         "${PROJECT_NAME}")
-set(PACKAGE_INCLUDE_DIR     "${INCTOP_DIR_NAME}/${INCPKG_DIR_NAME}")
 
-set(INCTOP_SOURCE_DIR       "${PROJECT_SOURCE_DIR}/${INCTOP_DIR_NAME}")
-set(INCTOP_BINARY_DIR       "${PROJECT_BINARY_DIR}/${INCTOP_DIR_NAME}")
-set(LIBTOP_SOURCE_DIR       "${PROJECT_SOURCE_DIR}/${LIBTOP_DIR_NAME}")
-set(LIBTOP_BINARY_DIR       "${PROJECT_BINARY_DIR}/${LIBTOP_DIR_NAME}")
+Include (${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
 
-set(INCLUDE_SOURCE_DIR      "${INCTOP_SOURCE_DIR}/${INCPKG_DIR_NAME}")
-set(INCLUDE_BINARY_DIR      "${INCTOP_BINARY_DIR}/${INCPKG_DIR_NAME}")
 
 ##----------------------------------------------------------------
 ##
 ##    ビルド環境の検査。
+##
+
+##
+##    Check Programs.
+##
+
+##
+##    Check Header Files.
+##
+
+##
+##    Check Libraries.
+##
+
+##
+##    Check Types.
+##
+
+##
+##    Check Extra Compiler/Linker Options.
 ##
 
 Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
@@ -56,20 +98,6 @@ Include (${COMMON_CMAKE_DIR}/CheckStaticAssert.cmake)
 
 Include (${COMMON_CMAKE_DIR}/CheckRightValueReference.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckDefaultDeclarations.cmake)
-
-##
-##    Project Name Space.
-##
-
-set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
-
-##----------------------------------------------------------------
-##
-##    インクルードパスの設定。
-##
-
-include_directories("${PROJECT_SOURCE_DIR}/Include")
-include_directories("${PROJECT_BINARY_DIR}/Include")
 
 ##----------------------------------------------------------------
 ##
@@ -118,5 +146,5 @@ install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
 ##    サブディレクトリの追加。
 ##
 
-add_subdirectory(Lib)
-add_subdirectory(Bin)
+Add_SubDirectory (Lib)
+Add_SubDirectory (Bin)
