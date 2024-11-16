@@ -20,6 +20,14 @@ set(serial              "0.0.0")
 
 project(${PROJECT_NAME}     VERSION  1.0.0)
 
+
+##
+##    共通の .cmake ファイルの置いてある場所。
+##
+
+set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
+
+
 ##----------------------------------------------------------------
 ##
 ##    プロジェクトの基本設定。
@@ -27,7 +35,6 @@ project(${PROJECT_NAME}     VERSION  1.0.0)
 
 enable_testing ()
 
-set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
 set(INCTOP_DIR_NAME         "Include")
 set(BINTOP_DIR_NAME         "Bin")
 set(LIBTOP_DIR_NAME         "Lib")
