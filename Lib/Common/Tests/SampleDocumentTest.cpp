@@ -19,7 +19,7 @@
 **/
 
 #include    "TestDriver.h"
-#include    "Sample/Common/SampleDocument.h"
+#include    "LibraryProject/Common/SampleDocument.h"
 
 LIBPROJ_NAMESPACE_BEGIN
 namespace  Common  {

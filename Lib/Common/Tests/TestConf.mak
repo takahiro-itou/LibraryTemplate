@@ -6,12 +6,14 @@
 EXTRATESTS              =
 TESTS                   =  \
         LibraryProjectSettingsTest  \
+        SampleDocumentTest      \
         ${EXTRATESTS}
+
 ##
 ##    Test Configurations.
 ##
 
-TARGET_TESTEE_LIBRARY       +=
+TARGET_TESTEE_LIBRARY       +=  -lsampleCommon
 
 DIST_NOINST_DATA_FILES      +=
 DIST_NOINST_HEADER_FILES    +=
@@ -31,4 +33,5 @@ TEST_LDFLAGS_COMMON         +=
 ##
 
 LibraryProjectSettingsTest_SOURCES  =  LibraryProjectSettingsTest.cpp
+SampleDocumentTest_SOURCES          =  SampleDocumentTest.cpp
 
