@@ -1,9 +1,9 @@
 ﻿//  -*-  coding: utf-8-with-signature;  mode: c++  -*-  //
 /*************************************************************************
 **                                                                      **
-**                  ---  DocView Template Project  ---                  **
+**                      ---  Library Project.  ---                      **
 **                                                                      **
-**          Copyright (C), 2017-2022, Takahiro Itou                     **
+**          Copyright (C), 2016-2024, Takahiro Itou                     **
 **          All Rights Reserved.                                        **
 **                                                                      **
 **          License: (See COPYING or LICENSE files)                     **
@@ -18,10 +18,10 @@
 **      @file       Common/SampleDocument.cpp
 **/
 
-#include    "Sample/Common/SampleDocument.h"
+#include    "LibraryProject/Common/SampleDocument.h"
 
 
-SAMPLE_NAMESPACE_BEGIN
+LIBPROJ_NAMESPACE_BEGIN
 namespace  Common  {
 
 namespace  {
@@ -129,4 +129,4 @@ SampleDocument::setMessage(
 //
 
 }   //  End of namespace  Common
-SAMPLE_NAMESPACE_END
+LIBPROJ_NAMESPACE_END
