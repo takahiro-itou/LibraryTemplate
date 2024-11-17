@@ -22,7 +22,11 @@
 #    define   LIBPROJ_COMMON_INCLUDED_LIBRARY_PROJECT_SETTINGS_H
 
 //  スクリプトによる設定値が書き込まれたヘッダを読み込む。  //
-#include    "LibraryProject/.Config/ConfiguredLibraryProject.h"
+#if defined( SAMPLE_USE_PRE_CONFIGURED_MSVC )
+#    include    "LibraryProject/.Config/PreConfigLibraryProject.msvc.h"
+#else
+#    include    "LibraryProject/.Config/ConfiguredLibraryProject.h"
+#endif
 
 LIBPROJ_NAMESPACE_BEGIN
 
