@@ -58,12 +58,14 @@
 #    undef      LIBPROJ_ENABLE_CONSTEXPR
 #endif
 
-#if ( LIBPROJ_ENABLE_CONSTEXPR )
-#    define     CONSTEXPR_VAR       constexpr
-#    define     CONSTEXPR_FUNC      constexpr
-#else
-#    define     CONSTEXPR_VAR       const
-#    define     CONSTEXPR_FUNC
+#if !defined( CONSTEXPR_VAR ) && !defined( CONSTEXPR_FUNC )
+#    if ( LIBPROJ_ENABLE_CONSTEXPR )
+#        define     CONSTEXPR_VAR       constexpr
+#        define     CONSTEXPR_FUNC      constexpr
+#    else
+#        define     CONSTEXPR_VAR       const
+#        define     CONSTEXPR_FUNC
+#    endif
 #endif
 
 //----------------------------------------------------------------
