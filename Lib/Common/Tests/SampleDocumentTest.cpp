@@ -13,30 +13,32 @@
 *************************************************************************/
 
 /**
-**      An Implementation of Test Case 'Foo'.
+**      An Implementation of Test Case 'SampleDocument'.
 **
-**      @file       Foo/Tests/FooTest.cpp
+**      @file       Common/Tests/SampleDocumentTest.cpp
 **/
 
 #include    "TestDriver.h"
-#include    "LibraryProject/Foo/Foo.h"
+#include    "LibraryProject/Common/SampleDocument.h"
 
 LIBPROJ_NAMESPACE_BEGIN
-namespace  Foo  {
+namespace  Common  {
 
 //========================================================================
 //
-//    FooTest  class.
+//    SampleDocumentTest  class.
 //
 /**
-**    クラス Foo  の単体テスト。
+**    クラス SampleDocument の単体テスト。
 **/
 
-class  FooTest : public  TestFixture
+class  SampleDocumentTest : public  TestFixture
 {
-    CPPUNIT_TEST_SUITE(FooTest);
-    CPPUNIT_TEST(testFunctionFoo1);
-    CPPUNIT_TEST(testFunctionFoo2);
+    CPPUNIT_TEST_SUITE(SampleDocumentTest);
+    CPPUNIT_TEST(testCtor);
+    CPPUNIT_TEST(testCountAlphabet1);
+    CPPUNIT_TEST(testCountAlphabet2);
+    CPPUNIT_TEST(testCountAlphabet3);
     CPPUNIT_TEST_SUITE_END();
 
 public:
@@ -44,32 +46,64 @@ public:
     virtual  void   tearDown()  override    { }
 
 private:
-    void  testFunctionFoo1();
-    void  testFunctionFoo2();
+    void  testCtor();
+    void  testCountAlphabet1();
+    void  testCountAlphabet2();
+    void  testCountAlphabet3();
+
 };
 
-CPPUNIT_TEST_SUITE_REGISTRATION( FooTest );
+CPPUNIT_TEST_SUITE_REGISTRATION( SampleDocumentTest );
 
 //========================================================================
 //
 //    Tests.
 //
 
-void  FooTest::testFunctionFoo1()
+void  SampleDocumentTest::testCtor()
 {
-    CPPUNIT_ASSERT_EQUAL(   1, Foo::functionFoo( 0,  1) );
-    CPPUNIT_ASSERT_EQUAL(  13, Foo::functionFoo( 2,  3) );
-    CPPUNIT_ASSERT_EQUAL(  25, Foo::functionFoo( 3,  4) );
-    CPPUNIT_ASSERT_EQUAL( 169, Foo::functionFoo( 5, 12) );
+    SampleDocument  testee;
+
+    return;
 }
 
-void  FooTest::testFunctionFoo2()
+void  SampleDocumentTest::testCountAlphabet1()
 {
-    CPPUNIT_ASSERT_EQUAL(  25, Foo::functionFoo( 4,  3) );
-    CPPUNIT_ASSERT_EQUAL( 169, Foo::functionFoo(12,  5) );
+    SampleDocument  testee;
+
+    testee.setMessage("abcXYZ123");
+    CPPUNIT_ASSERT_EQUAL( 6, testee.countAlphabet() );
+
+    testee.setMessage("123");
+    CPPUNIT_ASSERT_EQUAL( 0, testee.countAlphabet() );
+
+    testee.setMessage("abc");
+    CPPUNIT_ASSERT_EQUAL( 3, testee.countAlphabet() );
+
+    return;
 }
 
-}   //  End of namespace  Foo
+void  SampleDocumentTest::testCountAlphabet2()
+{
+    SampleDocument  testee;
+
+    testee.setMessage("");
+    CPPUNIT_ASSERT_EQUAL( 0, testee.countAlphabet() );
+
+    return;
+}
+
+
+void  SampleDocumentTest::testCountAlphabet3()
+{
+    SampleDocument  testee;
+
+    CPPUNIT_ASSERT_EQUAL( 0, testee.countAlphabet() );
+
+    return;
+}
+
+}   //  End of namespace  Common
 LIBPROJ_NAMESPACE_END
 
 //========================================================================
@@ -81,4 +115,3 @@ int  main(int argc, char * argv[])
 {
     return ( executeCppUnitTests(argc, argv) );
 }
-

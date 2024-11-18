@@ -13,25 +13,53 @@
 *************************************************************************/
 
 /**
-**      An Implementation of Bar class.
+**      An Interface of SampleDocument class.
 **
-**      @file       Bar/Bar.h
+**      @file       Common/SampleDocument.h
 **/
 
-#include    "LibraryProject/Bar/Bar.h"
+#if !defined( LIBPROJ_COMMON_INCLUDED_SAMPLE_DOCUMENT_H )
+#    define   LIBPROJ_COMMON_INCLUDED_SAMPLE_DOCUMENT_H
+
+#include    "LibraryProjectSettings.h"
+
+#include    <string>
 
 LIBPROJ_NAMESPACE_BEGIN
-namespace  Bar  {
+namespace  Common  {
 
 //========================================================================
 //
-//    Bar  class.
+//    SampleDocument  class.
+//
+
+class  SampleDocument
+{
+
+//========================================================================
+//
+//    Internal Type Definitions.
 //
 
 //========================================================================
 //
 //    Constructor(s) and Destructor.
 //
+public:
+
+    //----------------------------------------------------------------
+    /**   インスタンスを初期化する
+    **  （デフォルトコンストラクタ）。
+    **
+    **/
+    SampleDocument();
+
+    //----------------------------------------------------------------
+    /**   インスタンスを破棄する
+    **  （デストラクタ）。
+    **
+    **/
+    virtual  ~SampleDocument();
 
 //========================================================================
 //
@@ -52,18 +80,36 @@ namespace  Bar  {
 //
 //    Public Member Functions (Virtual Functions).
 //
+public:
+
+    //----------------------------------------------------------------
+    /**   入力メッセージ中に含まれるアルファベットを数える。
+    **
+    **  @return     半角アルファベット [A-Za-z] の文字数
+    **/
+    virtual  int
+    countAlphabet()  const;
 
 //========================================================================
 //
 //    Public Member Functions.
 //
 
-CommonType
-Bar::functionBar(
-        CommonType  x)
-{
-    return ( x * x );
-}
+//========================================================================
+//
+//    Accessors.
+//
+public:
+
+    //----------------------------------------------------------------
+    /**   メッセージを設定する。
+    **
+    **  @param [in] message   入力データ
+    **  @return     void.
+    **/
+    void
+    setMessage(
+            const  std::string  &message);
 
 //========================================================================
 //
@@ -75,6 +121,24 @@ Bar::functionBar(
 //    For Internal Use Only.
 //
 
-}   //  End of namespace  Bar
+//========================================================================
+//
+//    Member Variables.
+//
+private:
+
+    std::string     m_message;
+
+//========================================================================
+//
+//    Other Features.
+//
+public:
+    //  テストクラス。  //
+    friend  class   SampleDocumentTest;
+};
+
+}   //  End of namespace  Common
 LIBPROJ_NAMESPACE_END
 
+#endif
