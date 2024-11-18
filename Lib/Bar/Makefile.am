@@ -52,7 +52,7 @@ LIBRARY_COMPILE_SRCFILES    =  \
 ##    List of Libraries.
 ##
 
-STATIC_LIBRARIES_LIST   =  libsampleBar.a
+STATIC_LIBRARIES_LIST   =  libsampleBar.static.a
 SHARED_LIBRARIES_LIST   =
 
 ##
@@ -78,5 +78,5 @@ include  $(top_srcdir)/.M4/Makefile.Install.inc
 ##    Build Libraries.
 ##
 
-libsampleBar_a_SOURCES  =  ${LIBRARY_SOURCE_FILES}
+libsampleBar_static_a_SOURCES   =  ${LIBRARY_SOURCE_FILES}
 

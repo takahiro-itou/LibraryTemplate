@@ -18,8 +18,8 @@
 **      @file       .Config/ConfiguredLibraryProject.h.in
 **/
 
-#if !defined( LIBPROJ_CONFIG_INCLUDED_CONFIGURED_LIBRARY_PROJECT_H )
-#    define   LIBPROJ_CONFIG_INCLUDED_CONFIGURED_LIBRARY_PROJECT_H
+#if !defined( LIBPROJ_CONFIG_INCLUDED_PRE_CONFIG_LIBRARY_PROJECT_H )
+#    define   LIBPROJ_CONFIG_INCLUDED_PRE_CONFIG_LIBRARY_PROJECT_H
 
 //========================================================================
 //
@@ -30,7 +30,7 @@
 **    スクリプトによって設定された名前空間。
 **/
 
-#define     LIBPROJ_CNF_NS                  @LIBPROJ_CNF_NAMESPACE@
+#define     LIBPROJ_CNF_NS                  LibraryProject
 
 /**
 **    名前空間。
@@ -52,7 +52,7 @@
 //    キーワード constexpr  の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_CONSTEXPR_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_CONSTEXPR            1
 #else
 #    undef      LIBPROJ_ENABLE_CONSTEXPR
@@ -73,7 +73,7 @@
 //    キーワード nullptr  の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_NULLPTR_ENABLED@ )
+#if ( 1 )
 #    define     LIBPROJ_ENABLE_NULLPTR              1
 #else
 #    if !defined( nullptr )
@@ -87,7 +87,7 @@
 //    キーワード override の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_OVERRIDE_ENABLED@ )
+#if ( 1 )
 #    define     LIBPROJ_ENABLE_OVERRIDE             1
 #else
 #    if !defined( override )
@@ -101,7 +101,7 @@
 //    キーワード static_assert  の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_STATIC_ASSERT_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_STATIC_ASSERT        1
 #else
 #    undef      LIBPROJ_ENABLE_STATIC_ASSERT
@@ -112,7 +112,7 @@
 //    右辺値参照の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_RVALUEREF_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_RVALUEREF            1
 #else
 #    undef      LIBPROJ_ENABLE_RVALUEREF
@@ -123,7 +123,7 @@
 //    不要なムーブ指定に関する警告の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_PESSIMIZING_MOVE_ERROR@ )
+#if ( 0 )
 #    define     LIBPROJ_ERROR_PESSIMIZING_MOVE      1
 #else
 #    undef      LIBPROJ_ERROR_PESSIMIZING_MOVE
@@ -134,7 +134,7 @@
 //    コピーコンストラクタのデフォルト宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_COPYCTOR_DEFAULT_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_COPYCTOR_DEFAULT     1
 #else
 #    undef      LIBPROJ_ENABLE_COPYCTOR_DEFAULT
@@ -145,7 +145,7 @@
 //    コピーコンストラクタのデリート宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_COPYCTOR_DELETE_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_COPYCTOR_DELETE      1
 #else
 #    undef      LIBPROJ_ENABLE_COPYCTOR_DELETE
@@ -156,7 +156,7 @@
 //    コピー代入演算子のデフォルト宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_COPYOPEQ_DEFAULT_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_COPYOPEQ_DEFAULT     1
 #else
 #    undef      LIBPROJ_ENABLE_COPYOPEQ_DEFAULT
@@ -167,7 +167,7 @@
 //    コピー代入演算子のデリート宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_COPYOPEQ_DELETE_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_COPYOPEQ_DELETE      1
 #else
 #    undef      LIBPROJ_ENABLE_COPYOPEQ_DELETE
@@ -178,7 +178,7 @@
 //    ムーブコンストラクタの宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_MOVECTOR_DECLARE_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_MOVECTOR_DECLARE     1
 #else
 #    undef      LIBPROJ_ENABLE_MOVECTOR_DECLARE
@@ -189,7 +189,7 @@
 //    ムーブコンストラクタのデフォルト宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_MOVECTOR_DEFAULT_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_MOVECTOR_DEFAULT     1
 #else
 #    undef      LIBPROJ_ENABLE_MOVECTOR_DEFAULT
@@ -200,7 +200,7 @@
 //    ムーブコンストラクタのデリート宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_MOVECTOR_DELETE_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_MOVECTOR_DELETE      1
 #else
 #    undef      LIBPROJ_ENABLE_MOVECTOR_DELETE
@@ -211,7 +211,7 @@
 //    ムーブ代入演算子の宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_MOVEOPEQ_DECLARE_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_MOVEOPEQ_DECLARE     1
 #else
 #    undef      LIBPROJ_ENABLE_MOVEOPEQ_DECLARE
@@ -222,7 +222,7 @@
 //    ムーブ代入演算子のデフォルト宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_MOVEOPEQ_DEFAULT_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_MOVEOPEQ_DEFAULT     1
 #else
 #    undef      LIBPROJ_ENABLE_MOVEOPEQ_DEFAULT
@@ -233,7 +233,7 @@
 //    ムーブ代入演算子のデリート宣言の検査。
 //
 
-#if ( @CONFIG_CHECK_CXX_MOVEOPEQ_DELETE_ENABLED@ )
+#if ( 0 )
 #    define     LIBPROJ_ENABLE_MOVEOPEQ_DELETE      1
 #else
 #    undef      LIBPROJ_ENABLE_MOVEOPEQ_DELETE

@@ -1,10 +1,14 @@
-//  -*-  coding: utf-8; mode: c++  -*-  //
+﻿//  -*-  coding: utf-8-with-signature;  mode: c++  -*-  //
 /*************************************************************************
 **                                                                      **
 **                      ---  Library Project.  ---                      **
 **                                                                      **
-**          Copyright (C), 2016, Takahiro Itou                          **
+**          Copyright (C), 2016-2024, Takahiro Itou                     **
 **          All Rights Reserved.                                        **
+**                                                                      **
+**          License: (See COPYING or LICENSE files)                     **
+**          GNU Affero General Public License (AGPL) version 3,         **
+**          or (at your option) any later version.                      **
 **                                                                      **
 *************************************************************************/
 
@@ -86,7 +90,7 @@ public:
 //
 public:
     //  テストクラス。  //
-    friend  class   EngineBaseTest;
+    friend  class   BarTest;
 };
 
 }   //  End of namespace  Bar

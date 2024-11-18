@@ -13,25 +13,49 @@
 *************************************************************************/
 
 /**
-**      An Implementation of Bar class.
+**      An Implementation of SampleDocument class.
 **
-**      @file       Bar/Bar.h
+**      @file       Common/SampleDocument.cpp
 **/
 
-#include    "LibraryProject/Bar/Bar.h"
+#include    "LibraryProject/Common/SampleDocument.h"
+
 
 LIBPROJ_NAMESPACE_BEGIN
-namespace  Bar  {
+namespace  Common  {
+
+namespace  {
+
+}   //  End of (Unnamed) namespace.
+
 
 //========================================================================
 //
-//    Bar  class.
+//    SampleDocument  class.
 //
 
 //========================================================================
 //
 //    Constructor(s) and Destructor.
 //
+
+//----------------------------------------------------------------
+//    インスタンスを初期化する
+//  （デフォルトコンストラクタ）。
+
+SampleDocument::SampleDocument()
+    : m_message()
+{
+}
+
+//----------------------------------------------------------------
+//    インスタンスを破棄する
+//  （デストラクタ）。
+//
+
+SampleDocument::~SampleDocument()
+{
+}
 
 //========================================================================
 //
@@ -53,16 +77,45 @@ namespace  Bar  {
 //    Public Member Functions (Virtual Functions).
 //
 
+//----------------------------------------------------------------
+//    入力メッセージ中に含まれるアルファベットを数える。
+//
+
+int
+SampleDocument::countAlphabet()  const
+{
+    const   size_t  len = this->m_message.length();
+    size_t  cnt = 0;
+    for ( size_t i = 0; i < len; ++ i ) {
+        const  char tmp = this->m_message[i];
+        if ( ('A' <= tmp) && (tmp <= 'Z') ) {
+            ++ cnt;
+        } else if ( ('a' <= tmp) && (tmp <= 'z') ) {
+            ++ cnt;
+        }
+    }
+
+    return ( static_cast<int>(cnt) );
+}
+
 //========================================================================
 //
 //    Public Member Functions.
 //
 
-CommonType
-Bar::functionBar(
-        CommonType  x)
+//========================================================================
+//
+//    Accessors.
+//
+
+//----------------------------------------------------------------
+//    メッセージを設定する。
+
+void
+SampleDocument::setMessage(
+        const  std::string  &message)
 {
-    return ( x * x );
+    this->m_message = message;
 }
 
 //========================================================================
@@ -75,6 +128,5 @@ Bar::functionBar(
 //    For Internal Use Only.
 //
 
-}   //  End of namespace  Bar
+}   //  End of namespace  Common
 LIBPROJ_NAMESPACE_END
-
