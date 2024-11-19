@@ -21,7 +21,7 @@
 #if !defined( LIBPROJ_BAR_INCLUDED_BAR_H )
 #    define   LIBPROJ_BAR_INCLUDED_BAR_H
 
-#include    "LibraryProject/Common/LibraryProjectSettings.h"
+#include    "Sample/Common/SampleSettings.h"
 
 LIBPROJ_NAMESPACE_BEGIN
 namespace  Bar  {
