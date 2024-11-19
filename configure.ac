@@ -16,10 +16,10 @@ dnl   パッケージの情報を指定する。
 dnl
 
 AC_INIT(
-    [LibraryProject],
+    [Sample],
     [0.0.0],
     [BUG-REPORT-ADDRESS],
-    [LibraryProject])
+    [Sample])
 
 dnl
 dnl   ツールの出力ディレクトリを指定する。
