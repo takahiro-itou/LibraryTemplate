@@ -156,7 +156,7 @@ AC_CONFIG_FILES([
 ])
 
 AC_CONFIG_FILES([
-    Include/Sample/.Config/ConfiguredLibraryProject.h
+    Include/Sample/.Config/ConfiguredSample.h
 ])
 
 dnl

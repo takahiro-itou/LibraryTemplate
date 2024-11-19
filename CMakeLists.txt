@@ -117,8 +117,8 @@ Find_Package (CppUnit)
 ##
 
 configure_file(
-    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredLibraryProject.h.in"
-    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredLibraryProject.h"
+    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredSample.h.in"
+    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredSample.h"
 )
 
 configure_file(
