@@ -15,17 +15,17 @@
 /**
 **      プロジェクトの設定。
 **
-**      @file       Common/LibraryProjectSettings.h
+**      @file       Common/SampleSettings.h
 **/
 
-#if !defined( LIBPROJ_COMMON_INCLUDED_LIBRARY_PROJECT_SETTINGS_H )
-#    define   LIBPROJ_COMMON_INCLUDED_LIBRARY_PROJECT_SETTINGS_H
+#if !defined( SAMPLE_COMMON_INCLUDED_SAMPLE_SETTINGS_H )
+#    define   SAMPLE_COMMON_INCLUDED_SAMPLE_SETTINGS_H
 
 //  スクリプトによる設定値が書き込まれたヘッダを読み込む。  //
 #if defined( SAMPLE_USE_PRE_CONFIGURED_MSVC )
-#    include    "LibraryProject/.Config/PreConfigLibraryProject.msvc.h"
+#    include    "Sample/.Config/PreConfigSample.msvc.h"
 #else
-#    include    "LibraryProject/.Config/ConfiguredLibraryProject.h"
+#    include    "Sample/.Config/ConfiguredSample.h"
 #endif
 
 LIBPROJ_NAMESPACE_BEGIN

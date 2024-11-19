@@ -18,10 +18,10 @@
 **      @file       Common/SampleDocument.h
 **/
 
-#if !defined( LIBPROJ_COMMON_INCLUDED_SAMPLE_DOCUMENT_H )
-#    define   LIBPROJ_COMMON_INCLUDED_SAMPLE_DOCUMENT_H
+#if !defined( SAMPLE_COMMON_INCLUDED_SAMPLE_DOCUMENT_H )
+#    define   SAMPLE_COMMON_INCLUDED_SAMPLE_DOCUMENT_H
 
-#include    "LibraryProjectSettings.h"
+#include    "SampleSettings.h"
 
 #include    <string>
 
