@@ -19,7 +19,8 @@
 **/
 
 #include    "TestDriver.h"
-#include    "LibraryProject/Foo/Foo.h"
+#include    "Sample/Foo/Foo.h"
+
 
 LIBPROJ_NAMESPACE_BEGIN
 namespace  Foo  {
