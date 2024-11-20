@@ -21,7 +21,7 @@
 #if !defined( LIBPROJ_FOO_INCLUDED_FOO_H )
 #    define   LIBPROJ_FOO_INCLUDED_FOO_H
 
-#include    "LibraryProject/Common/LibraryProjectSettings.h"
+#include    "Sample/Common/SampleSettings.h"
 
 LIBPROJ_NAMESPACE_BEGIN
 namespace  Foo  {

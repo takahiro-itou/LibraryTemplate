@@ -5,8 +5,8 @@
 
 EXTRATESTS              =
 TESTS                   =  \
-        LibraryProjectSettingsTest  \
         SampleDocumentTest      \
+        SampleSettingsTest      \
         ${EXTRATESTS}
 
 ##
@@ -32,6 +32,5 @@ TEST_LDFLAGS_COMMON         +=
 ##    Test Programs.
 ##
 
-LibraryProjectSettingsTest_SOURCES  =  LibraryProjectSettingsTest.cpp
-SampleDocumentTest_SOURCES          =  SampleDocumentTest.cpp
-
+SampleDocumentTest_SOURCES      =  SampleDocumentTest.cpp
+SampleSettingsTest_SOURCES      =  SampleSettingsTest.cpp

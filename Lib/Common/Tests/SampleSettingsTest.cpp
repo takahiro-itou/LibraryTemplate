@@ -1,35 +1,39 @@
-//  -*-  coding: utf-8; mode: c++  -*-  //
+﻿//  -*-  coding: utf-8-with-signature;  mode: c++  -*-  //
 /*************************************************************************
 **                                                                      **
 **                      ---  Library Project.  ---                      **
 **                                                                      **
-**          Copyright (C), 2016, Takahiro Itou                          **
+**          Copyright (C), 2016-2024, Takahiro Itou                     **
 **          All Rights Reserved.                                        **
+**                                                                      **
+**          License: (See COPYING or LICENSE files)                     **
+**          GNU Affero General Public License (AGPL) version 3,         **
+**          or (at your option) any later version.                      **
 **                                                                      **
 *************************************************************************/
 
 /**
-**      An Implementation of Test Case 'LibraryProjectSettings'.
+**      An Implementation of Test Case 'SampleSettings'.
 **
-**      @file       Common/Tests/LibraryProjectSettingsTest.cpp
+**      @file       Common/Tests/SampleSettingsTest.cpp
 **/
 
 #include    "TestDriver.h"
-#include    "LibraryProject/Common/LibraryProjectSettings.h"
+#include    "Sample/Common/SampleSettings.h"
 
 LIBPROJ_NAMESPACE_BEGIN
 
 //========================================================================
 //
-//    LibraryProjectSettingsTest  class.
+//    SampleSettingsTest  class.
 //
 /**
-**    クラス LibraryProjectSettings の単体テスト。
+**    クラス SampleSettings の単体テスト。
 **/
 
-class  LibraryProjectSettingsTest : public  TestFixture
+class  SampleSettingsTest : public  TestFixture
 {
-    CPPUNIT_TEST_SUITE(LibraryProjectSettingsTest);
+    CPPUNIT_TEST_SUITE(SampleSettingsTest);
     CPPUNIT_TEST(testNameSpace);
     CPPUNIT_TEST_SUITE_END();
 
@@ -41,14 +45,14 @@ private:
     void  testNameSpace();
 };
 
-CPPUNIT_TEST_SUITE_REGISTRATION( LibraryProjectSettingsTest );
+CPPUNIT_TEST_SUITE_REGISTRATION( SampleSettingsTest );
 
 //========================================================================
 //
 //    Tests.
 //
 
-void  LibraryProjectSettingsTest::testNameSpace()
+void  SampleSettingsTest::testNameSpace()
 {
     return;
 }

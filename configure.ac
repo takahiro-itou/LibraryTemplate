@@ -16,10 +16,10 @@ dnl   パッケージの情報を指定する。
 dnl
 
 AC_INIT(
-    [LibraryProject],
+    [Sample],
     [0.0.0],
     [BUG-REPORT-ADDRESS],
-    [LibraryProject])
+    [Sample])
 
 dnl
 dnl   ツールの出力ディレクトリを指定する。
@@ -70,7 +70,7 @@ m4_include([.M4/ConfigDirectory.m4])
 MYAC_CUSTOMIZE_LIBRARY_DIR([Lib])
 MYAC_CUSTOMIZE_BINARY_DIR([Bin])
 MYAC_CUSTOMIZE_INCLUDE_DIR(
-    [Include],  [LibraryProject],  [.Config],  [Config.h])
+    [Include], [Sample], [.Config], [Config.h])
 
 dnl----------------------------------------------------------------
 dnl
@@ -156,7 +156,7 @@ AC_CONFIG_FILES([
 ])
 
 AC_CONFIG_FILES([
-    Include/LibraryProject/.Config/ConfiguredLibraryProject.h
+    Include/Sample/.Config/ConfiguredSample.h
 ])
 
 dnl

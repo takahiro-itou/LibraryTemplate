@@ -18,7 +18,7 @@
 **      @file       Bar/Bar.h
 **/
 
-#include    "LibraryProject/Bar/Bar.h"
+#include    "Sample/Bar/Bar.h"
 
 LIBPROJ_NAMESPACE_BEGIN
 namespace  Bar  {

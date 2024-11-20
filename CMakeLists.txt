@@ -15,7 +15,7 @@ cmake_minimum_required(VERSION  3.0.2)
 ##    パッケージの情報を指定する。
 ##
 
-set(PROJECT_NAME        LibraryProject)
+set(PROJECT_NAME        Sample)
 set(serial              "0.0.0")
 
 project(${PROJECT_NAME}     VERSION  1.0.0)
@@ -117,8 +117,8 @@ Find_Package (CppUnit)
 ##
 
 configure_file(
-    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredLibraryProject.h.in"
-    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredLibraryProject.h"
+    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredSample.h.in"
+    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredSample.h"
 )
 
 configure_file(
