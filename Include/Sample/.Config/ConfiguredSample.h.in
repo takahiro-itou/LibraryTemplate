@@ -31,12 +31,17 @@
 **/
 
 #define     LIBPROJ_CNF_NS                  @LIBPROJ_CNF_NAMESPACE@
+#define     SAMPLE_CNF_NS                   @LIBPROJ_CNF_NAMESPACE@
 
 /**
 **    名前空間。
 **/
 
 #define     LIBPROJ_NAMESPACE               LIBPROJ_CNF_NS
+#define     SAMPLE_NAMESPACE                SAMPLE_CNF_NS
+
+#define     SAMPLE_NAMESPACE_BEGIN          namespace  SAMPLE_CNF_NS  {
+#define     SAMPLE_NAMESPACE_END            }
 
 #define     LIBPROJ_NAMESPACE_BEGIN         namespace  LIBPROJ_CNF_NS  {
 
