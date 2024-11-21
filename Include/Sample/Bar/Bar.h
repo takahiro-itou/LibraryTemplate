@@ -18,12 +18,13 @@
 **      @file       Bar/Bar.h
 **/
 
-#if !defined( LIBPROJ_BAR_INCLUDED_BAR_H )
-#    define   LIBPROJ_BAR_INCLUDED_BAR_H
+#if !defined( SAMPLE_BAR_INCLUDED_BAR_H )
+#    define   SAMPLE_BAR_INCLUDED_BAR_H
 
 #include    "Sample/Common/SampleSettings.h"
 
-LIBPROJ_NAMESPACE_BEGIN
+
+SAMPLE_NAMESPACE_BEGIN
 namespace  Bar  {
 
 //========================================================================
@@ -94,6 +95,6 @@ public:
 };
 
 }   //  End of namespace  Bar
-LIBPROJ_NAMESPACE_END
+SAMPLE_NAMESPACE_END
 
 #endif
