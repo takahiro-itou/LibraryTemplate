@@ -15,11 +15,11 @@
 /**
 **      スクリプトによる設定値が書き込まれるヘッダファイル。
 **
-**      @file       .Config/ConfiguredLibraryProject.h.in
+**      @file       .Config/ConfiguredSample.h.in
 **/
 
-#if !defined( LIBPROJ_CONFIG_INCLUDED_CONFIGURED_LIBRARY_PROJECT_H )
-#    define   LIBPROJ_CONFIG_INCLUDED_CONFIGURED_LIBRARY_PROJECT_H
+#if !defined( SAMPLE_CONFIG_INCLUDED_CONFIGURED_SAMPLE_H )
+#    define   SAMPLE_CONFIG_INCLUDED_CONFIGURED_SAMPLE_H
 
 //========================================================================
 //
