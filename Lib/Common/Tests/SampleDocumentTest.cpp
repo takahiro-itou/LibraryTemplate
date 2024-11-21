@@ -22,7 +22,7 @@
 #include    "Sample/Common/SampleDocument.h"
 
 
-LIBPROJ_NAMESPACE_BEGIN
+SAMPLE_NAMESPACE_BEGIN
 namespace  Common  {
 
 //========================================================================
@@ -105,7 +105,7 @@ void  SampleDocumentTest::testCountAlphabet3()
 }
 
 }   //  End of namespace  Common
-LIBPROJ_NAMESPACE_END
+SAMPLE_NAMESPACE_END
 
 //========================================================================
 //

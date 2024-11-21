@@ -21,7 +21,8 @@
 #include    "TestDriver.h"
 #include    "Sample/Common/SampleSettings.h"
 
-LIBPROJ_NAMESPACE_BEGIN
+
+SAMPLE_NAMESPACE_BEGIN
 
 //========================================================================
 //
@@ -57,7 +58,7 @@ void  SampleSettingsTest::testNameSpace()
     return;
 }
 
-LIBPROJ_NAMESPACE_END
+SAMPLE_NAMESPACE_END
 
 //========================================================================
 //
@@ -68,4 +69,3 @@ int  main(int argc, char * argv[])
 {
     return ( executeCppUnitTests(argc, argv) );
 }
-
