@@ -22,7 +22,8 @@
 
 #include    "Sample/Bar/Bar.h"
 
-LIBPROJ_NAMESPACE_BEGIN
+
+SAMPLE_NAMESPACE_BEGIN
 namespace  Foo  {
 
 //========================================================================
@@ -79,4 +80,4 @@ Foo::functionFoo(
 //
 
 }   //  End of namespace  Foo
-LIBPROJ_NAMESPACE_END
+SAMPLE_NAMESPACE_END

@@ -25,7 +25,8 @@
 
 #include    <string>
 
-LIBPROJ_NAMESPACE_BEGIN
+
+SAMPLE_NAMESPACE_BEGIN
 namespace  Common  {
 
 //========================================================================
@@ -139,6 +140,6 @@ public:
 };
 
 }   //  End of namespace  Common
-LIBPROJ_NAMESPACE_END
+SAMPLE_NAMESPACE_END
 
 #endif

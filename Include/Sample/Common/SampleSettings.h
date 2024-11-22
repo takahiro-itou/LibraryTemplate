@@ -28,7 +28,7 @@
 #    include    "Sample/.Config/ConfiguredSample.h"
 #endif
 
-LIBPROJ_NAMESPACE_BEGIN
+SAMPLE_NAMESPACE_BEGIN
 
 /**
 **    ダミーの型宣言。
@@ -36,6 +36,6 @@ LIBPROJ_NAMESPACE_BEGIN
 
 typedef     int     CommonType;
 
-LIBPROJ_NAMESPACE_END
+SAMPLE_NAMESPACE_END
 
 #endif
