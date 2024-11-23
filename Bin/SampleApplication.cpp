@@ -22,7 +22,7 @@
 
 #include    <iostream>
 
-using   namespace   LIBPROJ_NAMESPACE;
+using   namespace   SAMPLE_NAMESPACE;
 
 int  main(int argc, char * argv[])
 {
