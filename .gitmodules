@@ -1,9 +1,9 @@
-[submodule ".M4"]
-	path = .M4
-	url = ../InitM4.git
 [submodule ".CMake"]
 	path = .CMake
 	url = ../InitCMake.git
+[submodule ".M4"]
+	path = .M4
+	url = ../InitM4.git
 [submodule "Lib/Tests"]
 	path = Lib/Tests
-	url = git@gitlab.com:takahiro-itou-templates/CppUnitDriver.git
+	url = ../CppUnitDriver.git
