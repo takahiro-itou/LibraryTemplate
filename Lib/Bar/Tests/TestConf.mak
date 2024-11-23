@@ -3,28 +3,28 @@
 ##    List of Tests.
 ##
 
-EXTRATESTS              =
+extra_tests             =
 TESTS                   =  \
         BarTest            \
-        ${EXTRATESTS}
+        ${extra_tests}
 ##
 ##    Test Configurations.
 ##
 
-TARGET_TESTEE_LIBRARY       +=  -lsampleBar
+target_testee_library       +=  -lsampleBar
 
 DIST_NOINST_DATA_FILES      +=
 DIST_NOINST_HEADER_FILES    +=
-EXTRA_TEST_DRIVERS          +=
-LIBRARY_TEST_DRIVERS        +=
-SOURCE_TEST_DRIVERS         +=
+extra_test_drivers          +=
+library_test_drivers        +=
+source_test_drivers         +=
 
 ##
 ##    Compile and Link Options.
 ##
 
-TEST_CPPFLAGS_COMMON        +=
-TEST_LDFLAGS_COMMON         +=
+test_cppflags_common        +=
+test_ldflags_common         +=
 
 ##
 ##    Test Programs.
