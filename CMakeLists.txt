@@ -117,13 +117,13 @@ Find_Package (CppUnit)
 ##
 
 configure_file(
-    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredSample.h.in"
-    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredSample.h"
+    "${incpkg_source_dir}/.Config/ConfiguredSample.h.in"
+    "${incpkg_binary_dir}/.Config/ConfiguredSample.h"
 )
 
 configure_file(
-    "${INCLUDE_SOURCE_DIR}/.Config/Config.h.cmake.in"
-    "${INCLUDE_BINARY_DIR}/.Config/.${PROJECT_NAME}.Config.h"
+    "${incpkg_source_dir}/.Config/Config.h.cmake.in"
+    "${incpkg_binary_dir}/.Config/.${PROJECT_NAME}.Config.h"
 )
 
 ##----------------------------------------------------------------
