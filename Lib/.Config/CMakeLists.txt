@@ -4,23 +4,21 @@
 ##    モジュールの設定。
 ##
 
-Set (MODULE_DIR_NAME       ".Config")
-Set (MODULE_OUTPUT_NAME    "Config")
-Set (MODULE_TITLE          "Config")
+set(module_dir_name     ".Config")
+set(module_title        "Config")
 
-Set (INCLIB_SOURCE_DIR     "${INCLUDE_SOURCE_DIR}/${MODULE_DIR_NAME}")
-Set (INCLIB_BINARY_DIR     "${INCLUDE_BINARY_DIR}/${MODULE_DIR_NAME}")
+Include (${COMMON_CMAKE_DIR}/ConfigModule.cmake)
 
 ##----------------------------------------------------------------
 ##
 ##    ソースファイルとヘッダファイルのリスト。
 ##
 
-Set (LIBRARY_SOURCE_FILES
+set(LIBRARY_SOURCE_FILES
 )
 
-Set (INCLIB_HEADER_FILES
-        ${INCLIB_BINARY_DIR}/ConfiguredLibraryProject.h
+set(INCLIB_HEADER_FILES
+        ${inclib_binary_dir}/ConfiguredLibraryProject.h
 )
 
 ##----------------------------------------------------------------

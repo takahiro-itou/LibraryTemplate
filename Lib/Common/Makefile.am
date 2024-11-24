@@ -7,7 +7,7 @@
 ##    List of Directories.
 ##
 
-MODULE_DIR_NAME         =  Common
+module_dir_name         =  Common
 SUBDIRS                 =  .  Tests
 
 include  $(top_srcdir)/.M4/Makefile.DirList.inc
@@ -36,8 +36,8 @@ DIST_NOINST_HEADER_FILES    =  \
         ${EXTRA_NOINST_HEADER_FILES}
 
 INCLIB_HEADER_FILES         =  \
-        ${INCLIB_SOURCE_DIR}/SampleDocument.h  \
-        ${INCLIB_SOURCE_DIR}/SampleSettings.h  \
+        ${inclib_source_dir}/SampleDocument.h  \
+        ${inclib_source_dir}/SampleSettings.h  \
         ${EXTRA_LIBRARY_HEADER_FILES}
 
 INCLIB_NODIST_HEADER_FILES  =
@@ -65,7 +65,7 @@ SHARED_LIBRARIES_LIST   =
 ##
 
 AM_CPPFLAGS          =  \
-        -I${INCTOP_SOURCE_DIR}
+        -I${inctop_source_dir}
 AM_CFLAGS               =
 AM_CXXFLAGS             =
 

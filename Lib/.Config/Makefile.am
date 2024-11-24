@@ -7,7 +7,7 @@
 ##    List of Directories.
 ##
 
-MODULE_DIR_NAME         =  .Config
+module_dir_name         =  .Config
 SUBDIRS                 =  .
 
 include  $(top_srcdir)/.M4/Makefile.DirList.inc
@@ -29,7 +29,7 @@ LIBRARY_INLINE_FILES        =
 
 DIST_NOINST_DATA_FILES      =  \
         CMakeLists.txt                          \
-        ${INCLIB_SOURCE_DIR}/Config.h.cmake.in  \
+        ${inclib_source_dir}/Config.h.cmake.in  \
         ${EXTRA_NOINST_DATA_FILES}
 
 DIST_NOINST_HEADER_FILES    =  \
@@ -39,7 +39,7 @@ INCLIB_HEADER_FILES         =  \
         ${EXTRA_LIBRARY_HEADER_FILES}
 
 INCLIB_NODIST_HEADER_FILES  =  \
-        ${INCLIB_BINARY_DIR}/ConfiguredSample.h
+        ${inclib_binary_dir}/ConfiguredSample.h
 
 LIBRARY_INSTALL_SRCFILES    =  \
         ${LIBRARY_INLINE_FILES}
@@ -64,7 +64,7 @@ SHARED_LIBRARIES_LIST   =
 ##
 
 AM_CPPFLAGS          =  \
-        -I${INCTOP_SOURCE_DIR}
+        -I${inctop_source_dir}
 AM_CFLAGS               =
 AM_CXXFLAGS             =
 
