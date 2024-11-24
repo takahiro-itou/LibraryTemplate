@@ -25,10 +25,10 @@ include  $(top_srcdir)/.M4/Makefile.DirList.inc
 ##
 
 AM_CPPFLAGS          =  \
-        -I${INCTOP_SOURCE_DIR}
+        -I${inctop_source_dir}
 AM_CFLAGS               =
 AM_CXXFLAGS             =
-AM_LDFLAGS              =  -L${LIBTOP_BINARY_DIR}
+AM_LDFLAGS              =  -L${libtop_binary_dir}
 
 ##
 ##    List of Installs.

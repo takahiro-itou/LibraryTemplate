@@ -65,7 +65,7 @@ SHARED_LIBRARIES_LIST   =
 ##
 
 AM_CPPFLAGS          =  \
-        -I${INCTOP_SOURCE_DIR}
+        -I${inctop_source_dir}
 AM_CFLAGS               =
 AM_CXXFLAGS             =
 
