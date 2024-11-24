@@ -7,7 +7,7 @@
 ##    List of Directories.
 ##
 
-MODULE_DIR_NAME         =  Common
+module_dir_name         =  Common
 SUBDIRS                 =  .  Tests
 
 include  $(top_srcdir)/.M4/Makefile.DirList.inc

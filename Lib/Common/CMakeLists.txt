@@ -4,7 +4,7 @@
 ##    モジュールの設定。
 ##
 
-set(MODULE_TITLE        "Common")
+set(module_title        "Common")
 
 Include (${COMMON_CMAKE_DIR}/ConfigModule.cmake)
 

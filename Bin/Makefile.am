@@ -7,7 +7,7 @@
 ##    List of Directories.
 ##
 
-MODULE_DIR_NAME         =  Binary
+module_dir_name         =  Binary
 SUBDIRS                 =  .
 
 include  $(top_srcdir)/.M4/Makefile.DirList.inc

@@ -7,7 +7,7 @@
 ##    List of Directories.
 ##
 
-MODULE_DIR_NAME         =  .Config
+module_dir_name         =  .Config
 SUBDIRS                 =  .
 
 include  $(top_srcdir)/.M4/Makefile.DirList.inc

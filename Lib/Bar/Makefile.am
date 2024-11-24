@@ -7,7 +7,7 @@
 ##    List of Directories.
 ##
 
-MODULE_DIR_NAME         =  Bar
+module_dir_name         =  Bar
 SUBDIRS                 =  .  Tests
 
 include  $(top_srcdir)/.M4/Makefile.DirList.inc

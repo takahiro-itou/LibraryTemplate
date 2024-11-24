@@ -4,8 +4,8 @@
 ##    モジュールの設定。
 ##
 
-set(MODULE_DIR_NAME     ".Config")
-set(MODULE_TITLE        "Config")
+set(module_dir_name     ".Config")
+set(module_title        "Config")
 
 Include (${COMMON_CMAKE_DIR}/ConfigModule.cmake)
 
