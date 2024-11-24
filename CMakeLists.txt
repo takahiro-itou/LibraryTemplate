@@ -57,9 +57,9 @@ set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
 ##    ディレクトリ名。
 ##
 
-set(INCTOP_DIR_NAME         "Include")
+set(inctop_dir_name         "Include")
 set(BINTOP_DIR_NAME         "Bin")
-set(LIBTOP_DIR_NAME         "Lib")
+set(libtop_dir_name         "Lib")
 
 Include (${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
 
