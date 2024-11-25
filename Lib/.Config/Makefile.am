@@ -18,7 +18,7 @@ include  $(top_srcdir)/.M4/Makefiles/DirList.inc
 
 extra_library_source_files  =
 extra_library_header_files  =
-EXTRA_NOINST_DATA_FILES     =
+extra_noinst_data_files     =
 EXTRA_NOINST_HEADER_FILES   =
 
 LIBRARY_SOURCE_FILES        =  \
@@ -30,7 +30,7 @@ LIBRARY_INLINE_FILES        =
 dist_noinst_data_files      =  \
         CMakeLists.txt                          \
         ${inclib_source_dir}/Config.h.cmake.in  \
-        ${EXTRA_NOINST_DATA_FILES}
+        ${extra_noinst_data_files}
 
 dist_noinst_header_files    =  \
         ${EXTRA_NOINST_HEADER_FILES}
