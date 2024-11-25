@@ -13,7 +13,7 @@ TESTS                   =  \
 
 target_testee_library       +=  -lsampleBar
 
-DIST_NOINST_DATA_FILES      +=
+dist_noinst_data_files      +=
 DIST_NOINST_HEADER_FILES    +=
 extra_test_drivers          +=
 library_test_drivers        +=

@@ -27,7 +27,7 @@ LIBRARY_SOURCE_FILES        =  \
 LIBRARY_INSTANTIATIONS      =
 LIBRARY_INLINE_FILES        =
 
-DIST_NOINST_DATA_FILES      =  \
+dist_noinst_data_files      =  \
         CMakeLists.txt                          \
         ${inclib_source_dir}/Config.h.cmake.in  \
         ${EXTRA_NOINST_DATA_FILES}

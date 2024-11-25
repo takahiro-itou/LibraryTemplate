@@ -28,7 +28,7 @@ LIBRARY_SOURCE_FILES        =  \
 LIBRARY_INSTANTIATIONS      =
 LIBRARY_INLINE_FILES        =
 
-DIST_NOINST_DATA_FILES      =  \
+dist_noinst_data_files      =  \
         CMakeLists.txt              \
         ${EXTRA_NOINST_DATA_FILES}
 
