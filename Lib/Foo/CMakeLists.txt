@@ -6,7 +6,7 @@
 
 set(module_title        "Foo")
 
-Include (${COMMON_CMAKE_DIR}/ConfigModule.cmake)
+Include (${common_cmake_dir}/ConfigModule.cmake)
 
 ##----------------------------------------------------------------
 ##
@@ -30,7 +30,7 @@ set(MODULE_NEEDS_LIBRARIES
 ##    ビルドとインストールの設定。
 ##
 
-Include (${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
+Include (${common_cmake_dir}/BuildLibraryCommon.cmake)
 
 ##----------------------------------------------------------------
 ##

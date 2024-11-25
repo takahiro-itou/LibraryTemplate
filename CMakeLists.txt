@@ -25,13 +25,13 @@ project(${PROJECT_NAME}     VERSION  1.0.0)
 ##    共通の .cmake ファイルの置いてある場所。
 ##
 
-set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
+set(common_cmake_dir        "${PROJECT_SOURCE_DIR}/.CMake")
 
 ##
 ##    ターゲットシステムを判定
 ##
 
-Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
+Include (${common_cmake_dir}/TargetSystem.cmake)
 
 
 ##----------------------------------------------------------------
@@ -43,7 +43,7 @@ Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
 ##    デフォルトのコンパイルオプション。
 ##
 
-Include (${COMMON_CMAKE_DIR}/DefaultCompileOptions.cmake)
+Include (${common_cmake_dir}/DefaultCompileOptions.cmake)
 
 ##
 ##    Project Name Space.
@@ -61,7 +61,7 @@ set(inctop_dir_name         "Include")
 set(BINTOP_DIR_NAME         "Bin")
 set(libtop_dir_name         "Lib")
 
-Include (${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
+Include (${common_cmake_dir}/ConfigDirectory.cmake)
 
 
 ##----------------------------------------------------------------
@@ -89,15 +89,15 @@ Include (${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
 ##    Check Extra Compiler/Linker Options.
 ##
 
-Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
+Include (${common_cmake_dir}/EnableCxx11.cmake)
 
-Include (${COMMON_CMAKE_DIR}/CheckConstExpr.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckNullPtr.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckStaticAssert.cmake)
+Include (${common_cmake_dir}/CheckConstExpr.cmake)
+Include (${common_cmake_dir}/CheckNullPtr.cmake)
+Include (${common_cmake_dir}/CheckOverride.cmake)
+Include (${common_cmake_dir}/CheckStaticAssert.cmake)
 
-Include (${COMMON_CMAKE_DIR}/CheckRightValueReference.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckDefaultDeclarations.cmake)
+Include (${common_cmake_dir}/CheckRightValueReference.cmake)
+Include (${common_cmake_dir}/CheckDefaultDeclarations.cmake)
 
 ##----------------------------------------------------------------
 ##
@@ -106,7 +106,7 @@ Include (${COMMON_CMAKE_DIR}/CheckDefaultDeclarations.cmake)
 ##
 
 set(CMAKE_MODULE_PATH
-    ${CMAKE_MODULE_PATH}  ${COMMON_CMAKE_DIR}/Modules
+    ${CMAKE_MODULE_PATH}  ${common_cmake_dir}/Modules
 )
 
 Find_Package (CppUnit)

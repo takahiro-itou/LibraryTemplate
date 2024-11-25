@@ -6,7 +6,7 @@
 
 set(module_title        "Common")
 
-Include (${COMMON_CMAKE_DIR}/ConfigModule.cmake)
+Include (${common_cmake_dir}/ConfigModule.cmake)
 
 ##----------------------------------------------------------------
 ##
@@ -27,7 +27,7 @@ set(INCLIB_HEADER_FILES
 ##    ビルドとインストールの設定。
 ##
 
-Include (${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
+Include (${common_cmake_dir}/BuildLibraryCommon.cmake)
 
 ##----------------------------------------------------------------
 ##
