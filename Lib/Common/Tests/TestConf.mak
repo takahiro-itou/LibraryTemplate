@@ -16,7 +16,7 @@ TESTS                   =  \
 target_testee_library       +=  -lsampleCommon
 
 dist_noinst_data_files      +=
-DIST_NOINST_HEADER_FILES    +=
+dist_noinst_header_files    +=
 extra_test_drivers          +=
 library_test_drivers        +=
 source_test_drivers         +=

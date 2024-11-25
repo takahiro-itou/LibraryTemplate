@@ -32,7 +32,7 @@ dist_noinst_data_files      =  \
         ${inclib_source_dir}/Config.h.cmake.in  \
         ${EXTRA_NOINST_DATA_FILES}
 
-DIST_NOINST_HEADER_FILES    =  \
+dist_noinst_header_files    =  \
         ${EXTRA_NOINST_HEADER_FILES}
 
 INCLIB_HEADER_FILES         =  \
