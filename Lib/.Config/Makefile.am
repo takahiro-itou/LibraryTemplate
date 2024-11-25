@@ -19,7 +19,7 @@ include  $(top_srcdir)/.M4/Makefiles/DirList.inc
 extra_library_source_files  =
 extra_library_header_files  =
 extra_noinst_data_files     =
-EXTRA_NOINST_HEADER_FILES   =
+extra_noinst_header_files   =
 
 LIBRARY_SOURCE_FILES        =  \
         ${extra_library_source_files}
@@ -33,7 +33,7 @@ dist_noinst_data_files      =  \
         ${extra_noinst_data_files}
 
 dist_noinst_header_files    =  \
-        ${EXTRA_NOINST_HEADER_FILES}
+        ${extra_noinst_header_files}
 
 INCLIB_HEADER_FILES         =  \
         ${extra_library_header_files}
