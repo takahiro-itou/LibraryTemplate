@@ -18,7 +18,7 @@ set(LIBRARY_SOURCE_FILES
 )
 
 set(INCLIB_HEADER_FILES
-        ${inclib_binary_dir}/ConfiguredLibraryProject.h
+        ${inclib_binary_dir}/ConfiguredSample.h
 )
 
 ##----------------------------------------------------------------
