@@ -16,13 +16,13 @@ include  $(top_srcdir)/.M4/Makefiles/DirList.inc
 ##    List of Source and Header Files.
 ##
 
-EXTRA_LIBRARY_SOURCE_FILES  =
-EXTRA_LIBRARY_HEADER_FILES  =
+extra_library_source_files  =
+extra_library_header_files  =
 EXTRA_NOINST_DATA_FILES     =
 EXTRA_NOINST_HEADER_FILES   =
 
 LIBRARY_SOURCE_FILES        =  \
-        ${EXTRA_LIBRARY_SOURCE_FILES}
+        ${extra_library_source_files}
 
 LIBRARY_INSTANTIATIONS      =
 LIBRARY_INLINE_FILES        =
@@ -36,7 +36,7 @@ dist_noinst_header_files    =  \
         ${EXTRA_NOINST_HEADER_FILES}
 
 INCLIB_HEADER_FILES         =  \
-        ${EXTRA_LIBRARY_HEADER_FILES}
+        ${extra_library_header_files}
 
 INCLIB_NODIST_HEADER_FILES  =  \
         ${inclib_binary_dir}/ConfiguredSample.h
