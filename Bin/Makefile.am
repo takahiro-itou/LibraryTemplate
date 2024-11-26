@@ -10,7 +10,7 @@
 module_dir_name         =  Binary
 SUBDIRS                 =  .
 
-include  $(top_srcdir)/.M4/Makefile.DirList.inc
+include  $(top_srcdir)/.M4/Makefiles/DirList.inc
 
 ##
 ##    List of Source and Header Files.

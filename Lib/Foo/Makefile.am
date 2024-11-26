@@ -10,34 +10,34 @@
 module_dir_name         =  Foo
 SUBDIRS                 =  .  Tests
 
-include  $(top_srcdir)/.M4/Makefile.DirList.inc
+include  $(top_srcdir)/.M4/Makefiles/DirList.inc
 
 ##
 ##    List of Source and Header Files.
 ##
 
-EXTRA_LIBRARY_SOURCE_FILES  =
-EXTRA_LIBRARY_HEADER_FILES  =
-EXTRA_NOINST_DATA_FILES     =
-EXTRA_NOINST_HEADER_FILES   =
+extra_library_source_files  =
+extra_library_header_files  =
+extra_noinst_data_files     =
+extra_noinst_header_files   =
 
 LIBRARY_SOURCE_FILES        =  \
         Foo.cpp                \
-        ${EXTRA_LIBRARY_SOURCE_FILES}
+        ${extra_library_source_files}
 
 LIBRARY_INSTANTIATIONS      =
 LIBRARY_INLINE_FILES        =
 
-DIST_NOINST_DATA_FILES      =  \
+dist_noinst_data_files      =  \
         CMakeLists.txt              \
-        ${EXTRA_NOINST_DATA_FILES}
+        ${extra_noinst_data_files}
 
-DIST_NOINST_HEADER_FILES    =  \
-        ${EXTRA_NOINST_HEADER_FILES}
+dist_noinst_header_files    =  \
+        ${extra_noinst_header_files}
 
 INCLIB_HEADER_FILES         =  \
         ${inclib_source_dir}/Foo.h     \
-        ${EXTRA_LIBRARY_HEADER_FILES}
+        ${extra_library_header_files}
 
 INCLIB_NODIST_HEADER_FILES  =
 
@@ -72,7 +72,7 @@ AM_CXXFLAGS             =
 ##    Include Common Install Settings.
 ##
 
-include  $(top_srcdir)/.M4/Makefile.Install.inc
+include  $(top_srcdir)/.M4/Makefiles/Install.inc
 
 ##
 ##    Build Libraries.
