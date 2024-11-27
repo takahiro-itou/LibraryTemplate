@@ -53,8 +53,8 @@ LIBRARY_COMPILE_SRCFILES    +=  \
 ##    List of Libraries.
 ##
 
-STATIC_LIBRARIES_LIST   +=  libsampleCommon.static.a
-SHARED_LIBRARIES_LIST   +=
+static_libraries_list   +=  libsampleCommon.static.a
+shared_libraries_list   +=
 
 ##
 ##    Internal Libraries.

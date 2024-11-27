@@ -52,8 +52,8 @@ LIBRARY_COMPILE_SRCFILES    +=  \
 ##    List of Libraries.
 ##
 
-STATIC_LIBRARIES_LIST   +=
-SHARED_LIBRARIES_LIST   +=
+static_libraries_list   +=
+shared_libraries_list   +=
 
 ##
 ##    Internal Libraries.
