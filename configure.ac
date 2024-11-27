@@ -146,6 +146,8 @@ AC_CONFIG_FILES([
     .CMake/Makefile
     .CMake/Modules/Makefile
     .M4/Makefile
+    .M4/Checks/Makefile
+    .M4/Makefiles/Makefile
     Makefile
     Bin/Makefile
     Lib/Makefile
