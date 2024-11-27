@@ -38,7 +38,7 @@ dist_noinst_header_files    +=  \
 inclib_header_files         +=  \
         ${extra_library_header_files}
 
-INCLIB_NODIST_HEADER_FILES  +=  \
+inclib_nodist_header_files  +=  \
         ${inclib_binary_dir}/ConfiguredSample.h
 
 library_install_srcfiles    +=  \

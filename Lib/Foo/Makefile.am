@@ -39,7 +39,7 @@ inclib_header_files         +=  \
         ${inclib_source_dir}/Foo.h     \
         ${extra_library_header_files}
 
-INCLIB_NODIST_HEADER_FILES  +=
+inclib_nodist_header_files  +=
 
 library_install_srcfiles    +=  \
         ${LIBRARY_INLINE_FILES}
