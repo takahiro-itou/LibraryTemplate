@@ -11,6 +11,7 @@ module_dir_name         =  Bar
 SUBDIRS                 =  .  Tests
 
 include  $(top_srcdir)/.M4/Makefiles/DirList.inc
+include  $(top_srcdir)/.M4/Makefiles/DefVars.inc
 
 ##
 ##    List of Source and Header Files.
@@ -21,30 +22,29 @@ extra_library_header_files  =
 extra_noinst_data_files     =
 extra_noinst_header_files   =
 
-LIBRARY_SOURCE_FILES        =  \
-        Bar.cpp                \
+LIBRARY_SOURCE_FILES        +=  \
+        Bar.cpp                 \
         ${extra_library_source_files}
 
-LIBRARY_INSTANTIATIONS      =
-LIBRARY_INLINE_FILES        =
+LIBRARY_INSTANTIATIONS      +=
+LIBRARY_INLINE_FILES        +=
 
-dist_noinst_data_files      =  \
-        CMakeLists.txt              \
+dist_noinst_data_files      +=  \
         ${extra_noinst_data_files}
 
-dist_noinst_header_files    =  \
+dist_noinst_header_files    +=  \
         ${extra_noinst_header_files}
 
-INCLIB_HEADER_FILES         =  \
+INCLIB_HEADER_FILES         +=  \
         ${inclib_source_dir}/Bar.h     \
         ${extra_library_header_files}
 
-INCLIB_NODIST_HEADER_FILES  =
+INCLIB_NODIST_HEADER_FILES  +=
 
-LIBRARY_INSTALL_SRCFILES    =  \
+LIBRARY_INSTALL_SRCFILES    +=  \
         ${LIBRARY_INLINE_FILES}
 
-LIBRARY_COMPILE_SRCFILES    =  \
+LIBRARY_COMPILE_SRCFILES    +=  \
         ${LIBRARY_SOURCE_FILES}    \
         ${LIBRARY_INSTANTIATIONS}
 
@@ -52,21 +52,12 @@ LIBRARY_COMPILE_SRCFILES    =  \
 ##    List of Libraries.
 ##
 
-STATIC_LIBRARIES_LIST   =  libsampleBar.static.a
-SHARED_LIBRARIES_LIST   =
+STATIC_LIBRARIES_LIST   +=  libsampleBar.static.a
+SHARED_LIBRARIES_LIST   +=
 
 ##
 ##    Internal Libraries.
 ##
-
-##
-##    Compile and Link Options.
-##
-
-AM_CPPFLAGS          =  \
-        -I${inctop_source_dir}
-AM_CFLAGS               =
-AM_CXXFLAGS             =
 
 ##
 ##    Include Common Install Settings.
@@ -79,4 +70,3 @@ include  $(top_srcdir)/.M4/Makefiles/Install.inc
 ##
 
 libsampleBar_static_a_SOURCES   =  ${LIBRARY_SOURCE_FILES}
-
