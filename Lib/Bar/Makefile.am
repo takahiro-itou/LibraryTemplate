@@ -22,7 +22,7 @@ extra_library_header_files  =
 extra_noinst_data_files     =
 extra_noinst_header_files   =
 
-LIBRARY_SOURCE_FILES        +=  \
+library_source_files        +=  \
         Bar.cpp                 \
         ${extra_library_source_files}
 
@@ -45,7 +45,7 @@ LIBRARY_INSTALL_SRCFILES    +=  \
         ${LIBRARY_INLINE_FILES}
 
 LIBRARY_COMPILE_SRCFILES    +=  \
-        ${LIBRARY_SOURCE_FILES}    \
+        ${library_source_files}    \
         ${LIBRARY_INSTANTIATIONS}
 
 ##
@@ -69,4 +69,4 @@ include  $(top_srcdir)/.M4/Makefiles/Install.inc
 ##    Build Libraries.
 ##
 
-libsampleBar_static_a_SOURCES   =  ${LIBRARY_SOURCE_FILES}
+libsampleBar_static_a_SOURCES   =  ${library_source_files}

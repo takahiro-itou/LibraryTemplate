@@ -22,7 +22,7 @@ extra_library_header_files  =
 extra_noinst_data_files     =
 extra_noinst_header_files   =
 
-LIBRARY_SOURCE_FILES        +=  \
+library_source_files        +=  \
         ${extra_library_source_files}
 
 LIBRARY_INSTANTIATIONS      +=
@@ -45,7 +45,7 @@ LIBRARY_INSTALL_SRCFILES    +=  \
         ${LIBRARY_INLINE_FILES}
 
 LIBRARY_COMPILE_SRCFILES    +=  \
-        ${LIBRARY_SOURCE_FILES}    \
+        ${library_source_files}    \
         ${LIBRARY_INSTANTIATIONS}
 
 ##
