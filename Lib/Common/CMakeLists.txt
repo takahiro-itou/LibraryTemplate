@@ -17,7 +17,7 @@ set(library_source_files
        SampleDocument.cpp
 )
 
-set(INCLIB_HEADER_FILES
+set(inclib_header_files
         ${inclib_source_dir}/LibraryProjectSettings.h
         ${inclib_source_dir}/SampleDocument.h
 )

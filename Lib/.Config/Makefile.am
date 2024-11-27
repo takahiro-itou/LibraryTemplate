@@ -35,7 +35,7 @@ dist_noinst_data_files      +=  \
 dist_noinst_header_files    +=  \
         ${extra_noinst_header_files}
 
-INCLIB_HEADER_FILES         +=  \
+inclib_header_files         +=  \
         ${extra_library_header_files}
 
 INCLIB_NODIST_HEADER_FILES  +=  \
