@@ -42,10 +42,10 @@ inclib_header_files         +=  \
 
 INCLIB_NODIST_HEADER_FILES  +=
 
-LIBRARY_INSTALL_SRCFILES    +=  \
+library_install_srcfiles    +=  \
         ${LIBRARY_INLINE_FILES}
 
-LIBRARY_COMPILE_SRCFILES    +=  \
+library_compile_srcfiles    +=  \
         ${library_source_files}    \
         ${LIBRARY_INSTANTIATIONS}
 
