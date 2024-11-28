@@ -26,7 +26,7 @@ library_source_files        +=  \
         SampleDocument.cpp             \
         ${extra_library_source_files}
 
-LIBRARY_INSTANTIATIONS      +=
+library_instantiations      +=
 LIBRARY_INLINE_FILES        +=
 
 dist_noinst_data_files      +=  \
@@ -47,7 +47,7 @@ library_install_srcfiles    +=  \
 
 library_compile_srcfiles    +=  \
         ${library_source_files}    \
-        ${LIBRARY_INSTANTIATIONS}
+        ${library_instantiations}
 
 ##
 ##    List of Libraries.
