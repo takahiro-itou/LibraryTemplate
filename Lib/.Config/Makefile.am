@@ -26,7 +26,7 @@ library_source_files        +=  \
         ${extra_library_source_files}
 
 library_instantiations      +=
-LIBRARY_INLINE_FILES        +=
+library_inline_files        +=
 
 dist_noinst_data_files      +=  \
         ${inclib_source_dir}/Config.h.cmake.in  \
@@ -42,7 +42,7 @@ inclib_nodist_header_files  +=  \
         ${inclib_binary_dir}/ConfiguredSample.h
 
 library_install_srcfiles    +=  \
-        ${LIBRARY_INLINE_FILES}
+        ${library_inline_files}
 
 library_compile_srcfiles    +=  \
         ${library_source_files}    \
