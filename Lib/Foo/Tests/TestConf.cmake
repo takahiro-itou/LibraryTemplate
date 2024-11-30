@@ -4,7 +4,7 @@
 ##    テストの設定。
 ##
 
-Add_Test (NAME  FooTest
+add_test(NAME   FooTest
     COMMAND  $<TARGET_FILE:FooTest>
 )
 
@@ -13,5 +13,5 @@ Add_Test (NAME  FooTest
 ##    テストプログラムのビルド。
 ##
 
-Add_Executable (FooTest  FooTest.cpp)
+add_executable(FooTest  FooTest.cpp)
 
