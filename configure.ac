@@ -173,6 +173,19 @@ AC_CONFIG_FILES([
 ])
 
 dnl
+dnl   Common Festures in Sub Repository.
+dnl
+
+AC_CONFIG_FILES([
+])
+
+AC_CONFIG_FILES([
+])
+
+AC_CONFIG_FILES([
+])
+
+dnl
 dnl   指定したファイルを生成する。
 dnl
 
