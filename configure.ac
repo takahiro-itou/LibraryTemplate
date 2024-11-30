@@ -143,11 +143,6 @@ dnl   Basic Features.
 dnl
 
 AC_CONFIG_FILES([
-    .CMake/Makefile
-    .CMake/Modules/Makefile
-    .M4/Makefile
-    .M4/Checks/Makefile
-    .M4/Makefiles/Makefile
     Makefile
     Bin/Makefile
     Lib/Makefile
@@ -169,7 +164,6 @@ AC_CONFIG_FILES([
     Lib/Bar/Tests/Makefile
     Lib/Common/Tests/Makefile
     Lib/Foo/Tests/Makefile
-    Lib/Tests/Makefile
 ])
 
 dnl
@@ -177,12 +171,18 @@ dnl   Common Festures in Sub Repository.
 dnl
 
 AC_CONFIG_FILES([
+    .CMake/Makefile
+    .CMake/Modules/Makefile
 ])
 
 AC_CONFIG_FILES([
+    .M4/Makefile
+    .M4/Checks/Makefile
+    .M4/Makefiles/Makefile
 ])
 
 AC_CONFIG_FILES([
+    Lib/Tests/Makefile
 ])
 
 dnl
@@ -190,4 +190,3 @@ dnl   指定したファイルを生成する。
 dnl
 
 AC_OUTPUT
-
