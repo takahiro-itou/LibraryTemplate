@@ -22,7 +22,7 @@ set(inclib_header_files
 )
 
 set(MODULE_NEEDS_LIBRARIES
-        ${PROJECT_NAME}-${LIBRARIES_TARGET_PREFIX}Bar
+        ${project_target_prefix}Bar
 )
 
 ##----------------------------------------------------------------

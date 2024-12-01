@@ -4,7 +4,7 @@
 ##    テストの設定。
 ##
 
-Add_Test (NAME  BarTest
+add_Test(NAME   BarTest
     COMMAND  $<TARGET_FILE:BarTest>
 )
 
@@ -13,5 +13,5 @@ Add_Test (NAME  BarTest
 ##    テストプログラムのビルド。
 ##
 
-Add_Executable (BarTest  BarTest.cpp)
+add_executable(BarTest  BarTest.cpp)
 
