@@ -91,13 +91,13 @@ Include (${common_cmake_dir}/ConfigDirectory.cmake)
 
 Include (${common_cmake_dir}/EnableCxx11.cmake)
 
-Include (${common_cmake_dir}/CheckConstExpr.cmake)
-Include (${common_cmake_dir}/CheckNullPtr.cmake)
-Include (${common_cmake_dir}/CheckOverride.cmake)
+Include (${common_cmake_dir}/Checks/ConstExpr.cmake)
+Include (${common_cmake_dir}/Checks/NullPtr.cmake)
+Include (${common_cmake_dir}/Checks/Override.cmake)
 Include (${common_cmake_dir}/CheckStaticAssert.cmake)
-
 Include (${common_cmake_dir}/CheckRightValueReference.cmake)
 Include (${common_cmake_dir}/CheckDefaultDeclarations.cmake)
+
 
 ##----------------------------------------------------------------
 ##
