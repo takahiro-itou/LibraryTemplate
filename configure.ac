@@ -102,17 +102,16 @@ dnl
 dnl   Check Extra Compiler/Linker Options.
 dnl
 
-m4_include([.M4/CheckExtraFlags.m4])
-
-m4_include([.M4/EnableCxx11.m4])
+m4_include([.M4/Checks/CheckExtraFlags.m4])
+m4_include([.M4/Checks/EnableCxx11.m4])
 
 m4_include([.M4/Checks/ConstExpr.m4])
 m4_include([.M4/Checks/NullPtr.m4])
 m4_include([.M4/Checks/Override.m4])
 m4_include([.M4/Checks/StaticAssert.m4])
-
 m4_include([.M4/Checks/RightValueReference.m4])
 m4_include([.M4/Checks/DefaultDeclarations.m4])
+
 
 dnl----------------------------------------------------------------
 dnl
