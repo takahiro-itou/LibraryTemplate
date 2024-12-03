@@ -89,7 +89,7 @@ Include (${common_cmake_dir}/ConfigDirectory.cmake)
 ##    Check Extra Compiler/Linker Options.
 ##
 
-Include (${common_cmake_dir}/EnableCxx11.cmake)
+Include (${common_cmake_dir}/Checks/EnableCxx11.cmake)
 
 Include (${common_cmake_dir}/Checks/ConstExpr.cmake)
 Include (${common_cmake_dir}/Checks/NullPtr.cmake)
