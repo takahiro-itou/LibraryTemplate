@@ -57,8 +57,8 @@ dnl
 dnl   Project Name Space.
 dnl
 
-LIBPROJ_CNF_NAMESPACE=Sample
-AC_SUBST(LIBPROJ_CNF_NAMESPACE)
+SAMPLE_CNF_NAMESPACE=Sample
+AC_SUBST(SAMPLE_CNF_NAMESPACE)
 
 dnl----------------------------------------------------------------
 dnl

@@ -30,7 +30,7 @@
 **    スクリプトによって設定された名前空間。
 **/
 
-#define     SAMPLE_CNF_NS                   @LIBPROJ_CNF_NAMESPACE@
+#define     SAMPLE_CNF_NS                   @SAMPLE_CNF_NAMESPACE@
 
 /**
 **    名前空間。
