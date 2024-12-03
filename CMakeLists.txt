@@ -49,7 +49,7 @@ Include (${common_cmake_dir}/DefaultCompileOptions.cmake)
 ##    Project Name Space.
 ##
 
-set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
+set(LIBPROJ_CNF_NAMESPACE   Sample)
 
 
 ##----------------------------------------------------------------
