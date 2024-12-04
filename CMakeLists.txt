@@ -49,7 +49,7 @@ Include (${common_cmake_dir}/DefaultCompileOptions.cmake)
 ##    Project Name Space.
 ##
 
-set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
+set(SAMPLE_CNF_NAMESPACE    Sample)
 
 
 ##----------------------------------------------------------------
@@ -89,15 +89,15 @@ Include (${common_cmake_dir}/ConfigDirectory.cmake)
 ##    Check Extra Compiler/Linker Options.
 ##
 
-Include (${common_cmake_dir}/EnableCxx11.cmake)
+Include (${common_cmake_dir}/Checks/EnableCxx11.cmake)
 
-Include (${common_cmake_dir}/CheckConstExpr.cmake)
-Include (${common_cmake_dir}/CheckNullPtr.cmake)
-Include (${common_cmake_dir}/CheckOverride.cmake)
-Include (${common_cmake_dir}/CheckStaticAssert.cmake)
+Include (${common_cmake_dir}/Checks/ConstExpr.cmake)
+Include (${common_cmake_dir}/Checks/NullPtr.cmake)
+Include (${common_cmake_dir}/Checks/Override.cmake)
+Include (${common_cmake_dir}/Checks/StaticAssert.cmake)
+Include (${common_cmake_dir}/Checks/RightValueReference.cmake)
+Include (${common_cmake_dir}/Checks/DefaultDeclarations.cmake)
 
-Include (${common_cmake_dir}/CheckRightValueReference.cmake)
-Include (${common_cmake_dir}/CheckDefaultDeclarations.cmake)
 
 ##----------------------------------------------------------------
 ##

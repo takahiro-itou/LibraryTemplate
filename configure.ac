@@ -57,8 +57,8 @@ dnl
 dnl   Project Name Space.
 dnl
 
-LIBPROJ_CNF_NAMESPACE=LibraryProject
-AC_SUBST(LIBPROJ_CNF_NAMESPACE)
+SAMPLE_CNF_NAMESPACE=Sample
+AC_SUBST(SAMPLE_CNF_NAMESPACE)
 
 dnl----------------------------------------------------------------
 dnl
@@ -67,9 +67,9 @@ dnl
 
 m4_include([.M4/ConfigDirectory.m4])
 
-MYAC_CUSTOMIZE_LIBRARY_DIR([Lib])
-MYAC_CUSTOMIZE_BINARY_DIR([Bin])
-MYAC_CUSTOMIZE_INCLUDE_DIR(
+myac_customize_library_dir([Lib])
+myac_customize_binary_dir([Bin])
+myac_customize_include_dir(
     [Include], [Sample], [.Config], [Config.h])
 
 dnl----------------------------------------------------------------
@@ -102,17 +102,16 @@ dnl
 dnl   Check Extra Compiler/Linker Options.
 dnl
 
-m4_include([.M4/CheckExtraFlags.m4])
+m4_include([.M4/Checks/CheckExtraFlags.m4])
+m4_include([.M4/Checks/EnableCxx11.m4])
 
-m4_include([.M4/EnableCxx11.m4])
+m4_include([.M4/Checks/ConstExpr.m4])
+m4_include([.M4/Checks/NullPtr.m4])
+m4_include([.M4/Checks/Override.m4])
+m4_include([.M4/Checks/StaticAssert.m4])
+m4_include([.M4/Checks/RightValueReference.m4])
+m4_include([.M4/Checks/DefaultDeclarations.m4])
 
-m4_include([.M4/CheckConstExpr.m4])
-m4_include([.M4/CheckNullPtr.m4])
-m4_include([.M4/CheckOverride.m4])
-m4_include([.M4/CheckStaticAssert.m4])
-
-m4_include([.M4/CheckRightValueReference.m4])
-m4_include([.M4/CheckDefaultDeclarations.m4])
 
 dnl----------------------------------------------------------------
 dnl

@@ -30,7 +30,7 @@
 **    スクリプトによって設定された名前空間。
 **/
 
-#define     SAMPLE_CNF_NS                   LibraryProject
+#define     SAMPLE_CNF_NS                   Sample
 
 /**
 **    名前空間。
