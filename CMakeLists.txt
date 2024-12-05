@@ -106,7 +106,7 @@ Include (${common_cmake_dir}/Checks/DefaultDeclarations.cmake)
 ##
 
 set(CMAKE_MODULE_PATH
-    ${CMAKE_MODULE_PATH}  ${common_cmake_dir}/Modules
+    ${CMAKE_MODULE_PATH}  ${common_cmake_dir}/Packages
 )
 
 Find_Package (CppUnit)
