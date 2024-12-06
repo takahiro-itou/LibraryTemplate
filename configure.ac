@@ -119,7 +119,7 @@ dnl   Additional Packages.
 dnl   外部パッケージの追加
 dnl
 
-m4_include([.M4/WithExtPkgs.m4])
+m4_include([.M4/Packages/WithExtPkgs.m4])
 
 m4_include([.M4/Packages/CppUnit.m4])
 
