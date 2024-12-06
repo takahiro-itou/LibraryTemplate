@@ -7,11 +7,11 @@
 ##    List of Directories.
 ##
 
-module_dir_name         =  Common
-SUBDIRS                 =  .  Tests
+module_dir_name     =  Common
+SUBDIRS             =  .  Tests
 
-include  $(top_srcdir)/.M4/Makefiles/DirList.inc
-include  $(top_srcdir)/.M4/Makefiles/DefVars.inc
+include  $(top_srcdir)/.M4/BuildCommon/DirList.inc
+include  $(top_srcdir)/.M4/BuildCommon/DefVars.inc
 
 ##
 ##    List of Source and Header Files.
@@ -64,7 +64,7 @@ shared_libraries_list   +=
 ##    Include Common Install Settings.
 ##
 
-include  $(top_srcdir)/.M4/Makefiles/Install.inc
+include  $(top_srcdir)/.M4/BuildCommon/Install.inc
 
 ##
 ##    Build Libraries.

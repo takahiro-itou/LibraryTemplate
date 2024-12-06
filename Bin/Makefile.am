@@ -7,10 +7,10 @@
 ##    List of Directories.
 ##
 
-module_dir_name         =  Binary
-SUBDIRS                 =  .
+module_dir_name     =  Binary
+SUBDIRS             =  .
 
-include  $(top_srcdir)/.M4/Makefiles/DirList.inc
+include  $(top_srcdir)/.M4/BuildCommon/DirList.inc
 
 ##
 ##    List of Source and Header Files.
@@ -46,4 +46,3 @@ dist_noinst_DATA        =  \
 
 SampleApplication_SOURCES   =  SampleApplication.cpp
 SampleApplication_LDADD     =  -lsampleFoo
-

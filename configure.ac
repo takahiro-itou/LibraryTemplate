@@ -177,8 +177,8 @@ AC_CONFIG_FILES([
 
 AC_CONFIG_FILES([
     .M4/Makefile
+    .M4/BuildCommon/Makefile
     .M4/Checks/Makefile
-    .M4/Makefiles/Makefile
     .M4/Packages/Makefile
 ])
 
