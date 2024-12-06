@@ -171,7 +171,7 @@ dnl
 
 AC_CONFIG_FILES([
     .CMake/Makefile
-    .CMake/Modules/Makefile
+    .CMake/Packages/Makefile
 ])
 
 AC_CONFIG_FILES([
