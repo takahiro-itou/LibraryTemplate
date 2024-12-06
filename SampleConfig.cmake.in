@@ -11,7 +11,7 @@
 ##    ここにモジュールのディレクトリ名を列挙する。
 ##
 
-Set (@project_name@_MODULE_DIRS_LIST
+set(@project_name@_MODULE_DIRS_LIST
         .Config  Common
 )
 
@@ -20,37 +20,36 @@ Set (@project_name@_MODULE_DIRS_LIST
 
 ##  カレントディレクトリの名前を取得する。
 
-Set_FileName_Component (@project_name@_ROOT_DIR
+set_filename_component(@project_name@_ROOT_DIR
         "${CMAKE_CURRENT_LIST_FILE}"  PATH)
 
 ##  ライブラリファイルが格納されるトップディレクトリ。
 
-Set (@project_name@_LIBTOP_DIR
+set(@project_name@_LIBTOP_DIR
         "${@project_name@_ROOT_DIR}/@LIBTOP_DIR_NAME@"
 )
 
-Message ("Searching Modules From : ${@project_name@_LIBTOP_DIR}")
+message("Searching Modules From : ${@project_name@_LIBTOP_DIR}")
 
 ##  各モジュールのディレクトリを順に処理する。
 
 ForEach (@project_name@_MODULE_NAME  ${@project_name@_MODULE_DIRS_LIST})
 
     ##  対象のディレクトリ名。
-    Set (@project_name@_TARGET_DIR
+    set(@project_name@_TARGET_DIR
         "${@project_name@_LIBTOP_DIR}/${@project_name@_MODULE_NAME}"
     )
-    Message ("Searching Config Files : ${@project_name@_TARGET_DIR}")
+    message("Searching Config Files : ${@project_name@_TARGET_DIR}")
 
     ##  対象ディレクトリからエクスポートファイルを検索する。
-    File (GLOB  @project_name@_MODULE_CONFIG_FILES
+    file(GLOB   @project_name@_MODULE_CONFIG_FILES
             "${@project_name@_TARGET_DIR}/@project_name@-*-Export.cmake"
     )
 
     ##  検索で見つかったファイルをインクルードする。
     ForEach (@project_name@_FILE  ${@project_name@_MODULE_CONFIG_FILES})
-        Message ("Loading Module Config : ${@project_name@_FILE}")
+        message("Loading Module Config : ${@project_name@_FILE}")
         Include (${@project_name@_FILE})
     EndForEach ()
 
 EndForEach()
-
