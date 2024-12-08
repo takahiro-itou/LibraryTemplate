@@ -48,10 +48,10 @@ AC_CONFIG_SRCDIR([Makefile.am])
 AC_LANG([C++])
 
 dnl
-dnl   デフォルトのコンパイルオプション
+dnl   デフォルトのビルドオプション
 dnl
 
-m4_include([.M4/DefaultCompileOptions.m4])
+m4_include([.M4/DefaultBuildOptions.m4])
 
 dnl
 dnl   Project Name Space.

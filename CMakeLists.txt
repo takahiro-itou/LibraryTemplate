@@ -40,10 +40,10 @@ Include (${common_cmake_dir}/TargetSystem.cmake)
 ##
 
 ##
-##    デフォルトのコンパイルオプション。
+##    デフォルトのビルドオプション。
 ##
 
-Include (${common_cmake_dir}/DefaultCompileOptions.cmake)
+Include (${common_cmake_dir}/DefaultBuildOptions.cmake)
 
 ##
 ##    Project Name Space.
