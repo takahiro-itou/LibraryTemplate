@@ -1,5 +1,5 @@
 
-Include (${common_cmake_dir}/ConfigTarget.cmake)
+Include (${common_cmake_dir}/BuildCommon/ConfigTarget.cmake)
 
 add_executable       (SampleApplication     SampleApplication.cpp)
 target_link_libraries(SampleApplication     ${project_target_prefix}Foo)

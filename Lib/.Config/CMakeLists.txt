@@ -7,7 +7,8 @@
 set(module_dir_name     ".Config")
 set(module_title        "Config")
 
-Include (${common_cmake_dir}/ConfigModule.cmake)
+Include (${common_cmake_dir}/BuildCommon/ConfigModule.cmake)
+Include (${common_cmake_dir}/BuildCommon/ConfigTarget.cmake)
 
 ##----------------------------------------------------------------
 ##
