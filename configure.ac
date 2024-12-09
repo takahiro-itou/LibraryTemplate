@@ -174,12 +174,6 @@ dnl   Common Festures in Sub Repository.
 dnl
 
 m4_include([.CMake/GenConfigFiles.m4])
-AC_CONFIG_FILES([
-    .CMake/Makefile
-    .CMake/BuildCommon/Makefile
-    .CMake/Checks/Makefile
-    .CMake/Packages/Makefile
-])
 
 m4_include([.M4/GenConfigFiles.m4])
 AC_CONFIG_FILES([
