@@ -175,11 +175,7 @@ dnl
 
 m4_include([.CMake/GenConfigFiles.m4])
 m4_include([.M4/GenConfigFiles.m4])
-
 m4_include([Lib/Tests/GenConfigFiles.m4])
-AC_CONFIG_FILES([
-    Lib/Tests/Makefile
-])
 
 dnl
 dnl   指定したファイルを生成する。
