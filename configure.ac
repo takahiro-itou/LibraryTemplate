@@ -142,6 +142,14 @@ dnl   出力ファイルを設定する。
 dnl
 
 dnl
+dnl   Common Festures in Sub Repository.
+dnl
+
+m4_include([.CMake/GenConfigFiles.m4])
+m4_include([.M4/GenConfigFiles.m4])
+m4_include([Lib/Tests/GenConfigFiles.m4])
+
+dnl
 dnl   Basic Features.
 dnl
 
@@ -168,14 +176,6 @@ AC_CONFIG_FILES([
     Lib/Common/Tests/Makefile
     Lib/Foo/Tests/Makefile
 ])
-
-dnl
-dnl   Common Festures in Sub Repository.
-dnl
-
-m4_include([.CMake/GenConfigFiles.m4])
-m4_include([.M4/GenConfigFiles.m4])
-m4_include([Lib/Tests/GenConfigFiles.m4])
 
 dnl
 dnl   指定したファイルを生成する。
