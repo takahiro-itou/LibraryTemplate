@@ -6,7 +6,8 @@
 
 set(module_title        "Bar")
 
-Include (${common_cmake_dir}/ConfigModule.cmake)
+Include (${common_cmake_dir}/BuildCommon/ConfigModule.cmake)
+Include (${common_cmake_dir}/BuildCommon/ConfigTarget.cmake)
 
 ##----------------------------------------------------------------
 ##
@@ -26,7 +27,8 @@ set(inclib_header_files
 ##    ビルドとインストールの設定。
 ##
 
-Include (${common_cmake_dir}/BuildLibraryCommon.cmake)
+Include (${common_cmake_dir}/BuildCommon/BuildLib.cmake)
+Include (${common_cmake_dir}/BuildCommon/Install.cmake)
 
 ##----------------------------------------------------------------
 ##

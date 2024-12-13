@@ -1,5 +1,5 @@
 
-dnl----------------------------------------------------------------
+dnl ----------------------------------------------------------------
 dnl
 dnl   Package Configurations.
 dnl   パッケージ設定。
@@ -39,7 +39,8 @@ dnl
 
 m4_include([.M4/InitAutoMake.m4])
 
-dnl----------------------------------------------------------------
+
+dnl ----------------------------------------------------------------
 dnl
 dnl   プロジェクトの基本設定。
 dnl
@@ -48,10 +49,10 @@ AC_CONFIG_SRCDIR([Makefile.am])
 AC_LANG([C++])
 
 dnl
-dnl   デフォルトのコンパイルオプション
+dnl   デフォルトのビルドオプション
 dnl
 
-m4_include([.M4/DefaultCompileOptions.m4])
+m4_include([.M4/DefaultBuildOptions.m4])
 
 dnl
 dnl   Project Name Space.
@@ -60,7 +61,8 @@ dnl
 SAMPLE_CNF_NAMESPACE=Sample
 AC_SUBST(SAMPLE_CNF_NAMESPACE)
 
-dnl----------------------------------------------------------------
+
+dnl ----------------------------------------------------------------
 dnl
 dnl   ディレクトリ名。
 dnl
@@ -72,7 +74,8 @@ myac_customize_binary_dir([Bin])
 myac_customize_include_dir(
     [Include], [Sample], [.Config], [Config.h])
 
-dnl----------------------------------------------------------------
+
+dnl ----------------------------------------------------------------
 dnl
 dnl   ビルド環境の検査。
 dnl
@@ -113,17 +116,17 @@ m4_include([.M4/Checks/RightValueReference.m4])
 m4_include([.M4/Checks/DefaultDeclarations.m4])
 
 
-dnl----------------------------------------------------------------
+dnl ----------------------------------------------------------------
 dnl
 dnl   Additional Packages.
 dnl   外部パッケージの追加
 dnl
 
-m4_include([.M4/WithExtPkgs.m4])
-
+m4_include([.M4/Packages/WithExtPkgs.m4])
 m4_include([.M4/Packages/CppUnit.m4])
 
-dnl----------------------------------------------------------------
+
+dnl ----------------------------------------------------------------
 dnl
 dnl   Linker Scripts.
 dnl   リンカスクリプトを生成する。
@@ -131,11 +134,20 @@ dnl
 
 m4_include([Lib/.LinkerScript/LinkerScripts.m4])
 
-dnl----------------------------------------------------------------
+
+dnl ----------------------------------------------------------------
 dnl
 dnl   Outputs.
 dnl   出力ファイルを設定する。
 dnl
+
+dnl
+dnl   Common Festures in Sub Repository.
+dnl
+
+m4_include([.CMake/GenConfigFiles.m4])
+m4_include([.M4/GenConfigFiles.m4])
+m4_include([Lib/Tests/GenConfigFiles.m4])
 
 dnl
 dnl   Basic Features.
@@ -163,25 +175,6 @@ AC_CONFIG_FILES([
     Lib/Bar/Tests/Makefile
     Lib/Common/Tests/Makefile
     Lib/Foo/Tests/Makefile
-])
-
-dnl
-dnl   Common Festures in Sub Repository.
-dnl
-
-AC_CONFIG_FILES([
-    .CMake/Makefile
-    .CMake/Modules/Makefile
-])
-
-AC_CONFIG_FILES([
-    .M4/Makefile
-    .M4/Checks/Makefile
-    .M4/Makefiles/Makefile
-])
-
-AC_CONFIG_FILES([
-    Lib/Tests/Makefile
 ])
 
 dnl

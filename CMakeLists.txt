@@ -15,10 +15,10 @@ cmake_minimum_required(VERSION  3.0.2)
 ##    パッケージの情報を指定する。
 ##
 
-set(PROJECT_NAME        Sample)
+set(project_name        Sample)
 set(serial              "0.0.0")
 
-project(${PROJECT_NAME}     VERSION  1.0.0)
+project(${project_name}     VERSION  1.0.0)
 
 
 ##
@@ -40,10 +40,10 @@ Include (${common_cmake_dir}/TargetSystem.cmake)
 ##
 
 ##
-##    デフォルトのコンパイルオプション。
+##    デフォルトのビルドオプション。
 ##
 
-Include (${common_cmake_dir}/DefaultCompileOptions.cmake)
+Include (${common_cmake_dir}/DefaultBuildOptions.cmake)
 
 ##
 ##    Project Name Space.
@@ -106,7 +106,7 @@ Include (${common_cmake_dir}/Checks/DefaultDeclarations.cmake)
 ##
 
 set(CMAKE_MODULE_PATH
-    ${CMAKE_MODULE_PATH}  ${common_cmake_dir}/Modules
+    ${CMAKE_MODULE_PATH}  ${common_cmake_dir}/Packages
 )
 
 Find_Package (CppUnit)
@@ -123,7 +123,7 @@ configure_file(
 
 configure_file(
     "${incpkg_source_dir}/.Config/Config.h.cmake.in"
-    "${incpkg_binary_dir}/.Config/.${PROJECT_NAME}.Config.h"
+    "${incpkg_binary_dir}/.Config/.${project_name}.Config.h"
 )
 
 ##----------------------------------------------------------------
@@ -132,12 +132,12 @@ configure_file(
 ##
 
 configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}Config.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/${project_name}Config.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/${project_name}Config.cmake"
     @ONLY
 )
 
-install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${project_name}Config.cmake"
         DESTINATION  .
 )
 
