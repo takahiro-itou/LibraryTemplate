@@ -20,24 +20,24 @@ set(@project_name@_MODULE_DIRS_LIST
 
 ##  カレントディレクトリの名前を取得する。
 
-set_filename_component(@project_name@_ROOT_DIR
+set_filename_component(@project_name@_root_dir
         "${CMAKE_CURRENT_LIST_FILE}"  PATH)
 
 ##  ライブラリファイルが格納されるトップディレクトリ。
 
 set(@project_name@_LIBTOP_DIR
-        "${@project_name@_ROOT_DIR}/@LIBTOP_DIR_NAME@"
+        "${@project_name@_root_dir}/@LIBTOP_DIR_NAME@"
 )
 
 message("Searching Modules From : ${@project_name@_LIBTOP_DIR}")
 
 ##  各モジュールのディレクトリを順に処理する。
 
-ForEach (@project_name@_MODULE_NAME  ${@project_name@_MODULE_DIRS_LIST})
+ForEach (@project_name@_module_name  ${@project_name@_MODULE_DIRS_LIST})
 
     ##  対象のディレクトリ名。
     set(@project_name@_TARGET_DIR
-        "${@project_name@_LIBTOP_DIR}/${@project_name@_MODULE_NAME}"
+        "${@project_name@_LIBTOP_DIR}/${@project_name@_module_name}"
     )
     message("Searching Config Files : ${@project_name@_TARGET_DIR}")
 
