@@ -33,11 +33,9 @@ message("Searching Modules From : ${@project_name@_libtop_dir}")
 
 ##  各モジュールのディレクトリを順に処理する。
 
-ForEach (@project_name@_module_name  ${@project_name@_module_dirs_list})
-
     ##  対象のディレクトリ名。
     set(@project_name@_target_dir
-        "${@project_name@_libtop_dir}/${@project_name@_module_name}"
+        "${@project_name@_libtop_dir}/*"
     )
     message("Searching Config Files : ${@project_name@_target_dir}")
 
@@ -51,5 +49,3 @@ ForEach (@project_name@_module_name  ${@project_name@_module_dirs_list})
         message("Loading Module Config : ${@project_name@_file}")
         Include (${@project_name@_file})
     EndForEach ()
-
-EndForEach()
