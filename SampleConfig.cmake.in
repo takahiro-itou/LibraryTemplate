@@ -20,8 +20,8 @@ set(@project_name@_module_dirs_list
 
 ##  カレントディレクトリの名前を取得する。
 
-set_filename_component(@project_name@_root_dir
-        "${CMAKE_CURRENT_LIST_FILE}"  PATH)
+get_filename_component(@project_name@_root_dir
+        "${CMAKE_CURRENT_LIST_FILE}"  DIRECTORY)
 
 ##  ライブラリファイルが格納されるトップディレクトリ。
 
