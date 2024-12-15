@@ -47,9 +47,9 @@ ForEach (@project_name@_module_name  ${@project_name@_module_dirs_list})
     )
 
     ##  検索で見つかったファイルをインクルードする。
-    ForEach (@project_name@_FILE  ${@project_name@_module_export_files})
-        message("Loading Module Config : ${@project_name@_FILE}")
-        Include (${@project_name@_FILE})
+    ForEach (@project_name@_file  ${@project_name@_module_export_files})
+        message("Loading Module Config : ${@project_name@_file}")
+        Include (${@project_name@_file})
     EndForEach ()
 
 EndForEach()
