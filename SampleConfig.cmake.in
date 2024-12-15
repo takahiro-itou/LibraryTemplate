@@ -36,14 +36,14 @@ message("Searching Modules From : ${@project_name@_libtop_dir}")
 ForEach (@project_name@_module_name  ${@project_name@_module_dirs_list})
 
     ##  対象のディレクトリ名。
-    set(@project_name@_TARGET_DIR
+    set(@project_name@_target_dir
         "${@project_name@_libtop_dir}/${@project_name@_module_name}"
     )
-    message("Searching Config Files : ${@project_name@_TARGET_DIR}")
+    message("Searching Config Files : ${@project_name@_target_dir}")
 
     ##  対象ディレクトリからエクスポートファイルを検索する。
     file(GLOB   @project_name@_module_export_files
-            "${@project_name@_TARGET_DIR}/@project_name@-*-Export.cmake"
+            "${@project_name@_target_dir}/@project_name@-*-Export.cmake"
     )
 
     ##  検索で見つかったファイルをインクルードする。
