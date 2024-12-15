@@ -11,7 +11,7 @@
 ##    ここにモジュールのディレクトリ名を列挙する。
 ##
 
-set(@project_name@_MODULE_DIRS_LIST
+set(@project_name@_module_dirs_list
         .Config  Common
 )
 
@@ -25,19 +25,19 @@ set_filename_component(@project_name@_root_dir
 
 ##  ライブラリファイルが格納されるトップディレクトリ。
 
-set(@project_name@_LIBTOP_DIR
-        "${@project_name@_root_dir}/@LIBTOP_DIR_NAME@"
+set(@project_name@_libtop_dir
+        "${@project_name@_root_dir}/@libtop_dir_name@"
 )
 
-message("Searching Modules From : ${@project_name@_LIBTOP_DIR}")
+message("Searching Modules From : ${@project_name@_libtop_dir}")
 
 ##  各モジュールのディレクトリを順に処理する。
 
-ForEach (@project_name@_module_name  ${@project_name@_MODULE_DIRS_LIST})
+ForEach (@project_name@_module_name  ${@project_name@_module_dirs_list})
 
     ##  対象のディレクトリ名。
     set(@project_name@_TARGET_DIR
-        "${@project_name@_LIBTOP_DIR}/${@project_name@_module_name}"
+        "${@project_name@_libtop_dir}/${@project_name@_module_name}"
     )
     message("Searching Config Files : ${@project_name@_TARGET_DIR}")
 
