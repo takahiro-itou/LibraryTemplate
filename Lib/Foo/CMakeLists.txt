@@ -22,7 +22,7 @@ set(inclib_header_files
         ${inclib_source_dir}/Foo.h
 )
 
-set(MODULE_NEEDS_LIBRARIES
+set(module_needs_libraries
         ${project_target_prefix}Bar
 )
 
