@@ -12,7 +12,7 @@
 ##
 
 set(@project_name@_module_dirs_list
-        .Config  Common
+        .Config  Common  Foo  Bar
 )
 
 ##----------------------------------------------------------------
@@ -42,12 +42,12 @@ ForEach (@project_name@_module_name  ${@project_name@_module_dirs_list})
     message("Searching Config Files : ${@project_name@_TARGET_DIR}")
 
     ##  対象ディレクトリからエクスポートファイルを検索する。
-    file(GLOB   @project_name@_MODULE_CONFIG_FILES
+    file(GLOB   @project_name@_module_export_files
             "${@project_name@_TARGET_DIR}/@project_name@-*-Export.cmake"
     )
 
     ##  検索で見つかったファイルをインクルードする。
-    ForEach (@project_name@_FILE  ${@project_name@_MODULE_CONFIG_FILES})
+    ForEach (@project_name@_FILE  ${@project_name@_module_export_files})
         message("Loading Module Config : ${@project_name@_FILE}")
         Include (${@project_name@_FILE})
     EndForEach ()
