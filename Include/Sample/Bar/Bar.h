@@ -13,25 +13,26 @@
 *************************************************************************/
 
 /**
-**      An Interface of Foo class.
+**      An Interface of Bar class.
 **
-**      @file       Foo/Foo.h
+**      @file       Bar/Bar.h
 **/
 
-#if !defined( LIBPROJ_FOO_INCLUDED_FOO_H )
-#    define   LIBPROJ_FOO_INCLUDED_FOO_H
+#if !defined( SAMPLE_BAR_INCLUDED_BAR_H )
+#    define   SAMPLE_BAR_INCLUDED_BAR_H
 
-#include    "LibraryProject/Common/LibraryProjectSettings.h"
+#include    "Sample/Common/SampleSettings.h"
 
-LIBPROJ_NAMESPACE_BEGIN
-namespace  Foo  {
+
+SAMPLE_NAMESPACE_BEGIN
+namespace  Bar  {
 
 //========================================================================
 //
-//    Foo  class.
+//    Bar  class.
 //
 
-class  Foo
+class  Bar
 {
 
 //========================================================================
@@ -66,9 +67,8 @@ class  Foo
 public:
 
     static  CommonType
-    functionFoo(
-            CommonType  x,
-            CommonType  y);
+    functionBar(
+            CommonType  x);
 
 //========================================================================
 //
@@ -91,10 +91,10 @@ public:
 //
 public:
     //  テストクラス。  //
-    friend  class   FooTest;
+    friend  class   BarTest;
 };
 
-}   //  End of namespace  Foo
-LIBPROJ_NAMESPACE_END
+}   //  End of namespace  Bar
+SAMPLE_NAMESPACE_END
 
 #endif

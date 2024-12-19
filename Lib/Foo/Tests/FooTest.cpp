@@ -19,9 +19,10 @@
 **/
 
 #include    "TestDriver.h"
-#include    "LibraryProject/Foo/Foo.h"
+#include    "Sample/Foo/Foo.h"
 
-LIBPROJ_NAMESPACE_BEGIN
+
+SAMPLE_NAMESPACE_BEGIN
 namespace  Foo  {
 
 //========================================================================
@@ -70,7 +71,7 @@ void  FooTest::testFunctionFoo2()
 }
 
 }   //  End of namespace  Foo
-LIBPROJ_NAMESPACE_END
+SAMPLE_NAMESPACE_END
 
 //========================================================================
 //
@@ -81,4 +82,3 @@ int  main(int argc, char * argv[])
 {
     return ( executeCppUnitTests(argc, argv) );
 }
-

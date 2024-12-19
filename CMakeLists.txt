@@ -15,23 +15,23 @@ cmake_minimum_required(VERSION  3.0.2)
 ##    パッケージの情報を指定する。
 ##
 
-set(PROJECT_NAME        LibraryProject)
-set(serial              "1.1.91")
+set(project_name        Sample)
+set(serial              "0.0.0")
 
-project(${PROJECT_NAME}     VERSION  1.1.91)
+project(${project_name}     VERSION  1.0.0)
 
 
 ##
 ##    共通の .cmake ファイルの置いてある場所。
 ##
 
-set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
+set(common_cmake_dir        "${PROJECT_SOURCE_DIR}/.CMake")
 
 ##
 ##    ターゲットシステムを判定
 ##
 
-Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
+Include (${common_cmake_dir}/TargetSystem.cmake)
 
 
 ##----------------------------------------------------------------
@@ -40,16 +40,16 @@ Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
 ##
 
 ##
-##    デフォルトのコンパイルオプション。
+##    デフォルトのビルドオプション。
 ##
 
-Include (${COMMON_CMAKE_DIR}/DefaultCompileOptions.cmake)
+Include (${common_cmake_dir}/DefaultBuildOptions.cmake)
 
 ##
 ##    Project Name Space.
 ##
 
-set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
+set(SAMPLE_CNF_NAMESPACE    Sample)
 
 
 ##----------------------------------------------------------------
@@ -57,11 +57,11 @@ set(LIBPROJ_CNF_NAMESPACE   LibraryProject)
 ##    ディレクトリ名。
 ##
 
-set(INCTOP_DIR_NAME         "Include")
-set(BINTOP_DIR_NAME         "Bin")
-set(LIBTOP_DIR_NAME         "Lib")
+set(inctop_dir_name         "Include")
+set(bintop_dir_name         "Bin")
+set(libtop_dir_name         "Lib")
 
-Include (${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
+Include (${common_cmake_dir}/ConfigDirectory.cmake)
 
 
 ##----------------------------------------------------------------
@@ -89,15 +89,15 @@ Include (${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
 ##    Check Extra Compiler/Linker Options.
 ##
 
-Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
+Include (${common_cmake_dir}/Checks/EnableCxx11.cmake)
 
-Include (${COMMON_CMAKE_DIR}/CheckConstExpr.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckNullPtr.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckStaticAssert.cmake)
+Include (${common_cmake_dir}/Checks/ConstExpr.cmake)
+Include (${common_cmake_dir}/Checks/NullPtr.cmake)
+Include (${common_cmake_dir}/Checks/Override.cmake)
+Include (${common_cmake_dir}/Checks/StaticAssert.cmake)
+Include (${common_cmake_dir}/Checks/RightValueReference.cmake)
+Include (${common_cmake_dir}/Checks/DefaultDeclarations.cmake)
 
-Include (${COMMON_CMAKE_DIR}/CheckRightValueReference.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckDefaultDeclarations.cmake)
 
 ##----------------------------------------------------------------
 ##
@@ -106,7 +106,7 @@ Include (${COMMON_CMAKE_DIR}/CheckDefaultDeclarations.cmake)
 ##
 
 set(CMAKE_MODULE_PATH
-    ${CMAKE_MODULE_PATH}  ${COMMON_CMAKE_DIR}/Modules
+    ${CMAKE_MODULE_PATH}  ${common_cmake_dir}/Packages
 )
 
 Find_Package (CppUnit)
@@ -117,13 +117,13 @@ Find_Package (CppUnit)
 ##
 
 configure_file(
-    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredLibraryProject.h.in"
-    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredLibraryProject.h"
+    "${incpkg_source_dir}/.Config/ConfiguredSample.h.in"
+    "${incpkg_binary_dir}/.Config/ConfiguredSample.h"
 )
 
 configure_file(
-    "${INCLUDE_SOURCE_DIR}/.Config/Config.h.cmake.in"
-    "${INCLUDE_BINARY_DIR}/.Config/.${PROJECT_NAME}.Config.h"
+    "${incpkg_source_dir}/.Config/Config.h.cmake.in"
+    "${incpkg_binary_dir}/.Config/.${project_name}.Config.h"
 )
 
 ##----------------------------------------------------------------
@@ -132,12 +132,12 @@ configure_file(
 ##
 
 configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}Config.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/${project_name}Config.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/${project_name}Config.cmake"
     @ONLY
 )
 
-install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${project_name}Config.cmake"
         DESTINATION  .
 )
 

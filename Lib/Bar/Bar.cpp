@@ -18,9 +18,10 @@
 **      @file       Bar/Bar.h
 **/
 
-#include    "LibraryProject/Bar/Bar.h"
+#include    "Sample/Bar/Bar.h"
 
-LIBPROJ_NAMESPACE_BEGIN
+
+SAMPLE_NAMESPACE_BEGIN
 namespace  Bar  {
 
 //========================================================================
@@ -76,5 +77,4 @@ Bar::functionBar(
 //
 
 }   //  End of namespace  Bar
-LIBPROJ_NAMESPACE_END
-
+SAMPLE_NAMESPACE_END
