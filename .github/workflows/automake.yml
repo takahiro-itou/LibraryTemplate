@@ -1,12 +1,6 @@
 
 name: CI for AutoMake
 
-on:
-  push:
-    branches: [ "master", "develop" ]
-  pull_request:
-    branches: [ "master", "develop" ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -61,3 +55,10 @@ jobs:
         env :
           cppunit_dir : ${{ steps.install-cppunit.outputs.real-install-dir }}
         shell : bash
+
+on:
+  push:
+    branches: [ "master", "develop" ]
+  pull_request:
+    branches: [ "master", "develop" ]
+  workflow_dispatch
