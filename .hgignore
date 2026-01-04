@@ -4,6 +4,11 @@ syntax: glob
 syntax: regexp
 ^\.git/
 
+^\.CMake/\.git
+^\.M4/\.git
+^\.hgtags
+^Lib/Tests/.git
+
 Makefile$
 Makefile\.in$
 Config\.h\.in$
